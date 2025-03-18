@@ -3,6 +3,7 @@ namespace PaxAcDesign.calculate.datatype;
 
 public enum AircraftType
 {
+    
     [Display(Name = "Самолет бизнес-класса")]
     BusinessJet,
     [Display(Name = "Реактивный самолет малой дальности полета")]
@@ -17,4 +18,5 @@ public enum AircraftType
     Fighter,
     [Display(Name = "Сверхзвуковой крейсерский самолет")]
     SupersonicCruise
+    
 }

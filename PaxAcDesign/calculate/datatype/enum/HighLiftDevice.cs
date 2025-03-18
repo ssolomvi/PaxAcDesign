@@ -3,6 +3,7 @@ namespace PaxAcDesign.calculate.datatype;
 
 public enum HighLiftDevice
 {
+    
     [Display(Name = "Чистый аэродинамический профиль")]
     CleanAirfoil,
     [Display(Name = "Простой закрылок")]
@@ -27,4 +28,5 @@ public enum HighLiftDevice
     DoubleSlottedFlapAndSlat,
     [Display(Name = "Закрылок Фаулера и предкрылок")]
     FowlerFlapAndSlat
+    
 }

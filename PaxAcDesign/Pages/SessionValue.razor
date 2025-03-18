@@ -1,0 +1,31 @@
+@page "/value"
+
+<h3>Session value</h3>
+<p>
+    @if (count != 0)
+    {
+        <label>@count</label>
+    }
+    else
+    {
+        <label>No data</label>
+    }
+</p>
+<button class="btn btn-primary" @onClick="ReadCounter">Read data</button>
+
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+@code
+{
+    int count;
+
+    protected override async Task OnInitializedAsync()
+    {
+        count = await localStorage.GetItemAsync<int>("count");
+    }
+    
+    public async Task ReadCounter()
+    {
+        count = await localStorage.GetItemAsync<int>("count");
+    }
+}

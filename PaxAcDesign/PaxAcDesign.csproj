@@ -9,18 +9,18 @@
 
     <ItemGroup>
         <!--        UI -->
-        <PackageReference Include="Blazor.Bootstrap" Version="3.3.1"/>
+        <PackageReference Include="Radzen.Blazor" Version="6.2.10" />
 
         <!--        Browser Cache (cookie analogue) -->
-        <PackageReference Include="Blazored.LocalStorage" Version="4.5.0"/>
+        <PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
 
         <!--        Localtization -->
-        <PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.0-preview.1.25120.3"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
-        <PackageReference Include="System.Net.Http.Json" Version="10.0.0-preview.1.25080.5"/>
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.0-preview.1.25120.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="System.Net.Http.Json" Version="10.0.0-preview.1.25080.5" />
 
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.13"/>
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.13" PrivateAssets="all"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.13" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.13" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
@@ -31,34 +31,17 @@
 
     <ItemGroup>
         <EmbeddedResource Update="Resources\App.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>App.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Resources\App.fr.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>App.fr.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Resources\App.ar.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>App.ar.Designer.cs</LastGenOutput>
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>App.Designer.cs</LastGenOutput>
+          <CustomToolNamespace></CustomToolNamespace>
         </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
         <Compile Update="Resources\App.Designer.cs">
-            <DesignTime>True</DesignTime>
-            <AutoGen>True</AutoGen>
-            <DependentUpon>App.resx</DependentUpon>
-        </Compile>
-        <Compile Update="Resources\App.fr.Designer.cs">
-            <DesignTime>True</DesignTime>
-            <AutoGen>True</AutoGen>
-            <DependentUpon>App.fr.resx</DependentUpon>
-        </Compile>
-        <Compile Update="Resources\App.ar.Designer.cs">
-            <DesignTime>True</DesignTime>
-            <AutoGen>True</AutoGen>
-            <DependentUpon>App.ar.resx</DependentUpon>
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>App.resx</DependentUpon>
         </Compile>
     </ItemGroup>
 

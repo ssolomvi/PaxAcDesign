@@ -1,6 +1,5 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersAircraft;
+﻿namespace PaxAcDesign.calculate.Handlers.HandlersAircraft;
 
 public interface IHandlerAircraft
 {
-    
 }

@@ -1,10 +1,9 @@
-﻿using Pax_AC_Design.ModuleCalculate.Handlers;
-using Pax_AC_Design.ModuleCalculate.Request;
-using PaxAcDesign.calculate.datatype;
+﻿using PaxAcDesign.calculate.datatype;
+using PaxAcDesign.calculate.Handlers;
 
 // using Microsoft.Data.Sqlite;
 
-namespace pax_ac_design.ModuleCalculate.PreliminarySizing;
+namespace PaxAcDesign.calculate.PreliminarySizing;
 
 /*
  * В блоке 1 "Посадочный путь" указано максимальное значение нагрузки на крыло, m/S.

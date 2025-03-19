@@ -1,5 +1,6 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersPurpose;
-using Request;
+﻿using PaxAcDesign.calculate.datatype;
+
+namespace PaxAcDesign.calculate.Handlers.HandlersPurpose;
 
 // требования
 public class HandlerRequirements : AbstractHandlerPurpose
@@ -14,7 +15,7 @@ public class HandlerRequirements : AbstractHandlerPurpose
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
+
         // do smth
 
         return PassToNextHandler(request);

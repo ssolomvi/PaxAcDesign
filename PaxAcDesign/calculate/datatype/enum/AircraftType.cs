@@ -1,22 +1,27 @@
 using System.ComponentModel.DataAnnotations;
+
 namespace PaxAcDesign.calculate.datatype;
 
 public enum AircraftType
 {
-    
-    [Display(Name = "Самолет бизнес-класса")]
+    [Display(Description = "BusinessJet", ResourceType = typeof(Resources.App))]
     BusinessJet,
-    [Display(Name = "Реактивный самолет малой дальности полета")]
+
+    [Display(Description = "ShortRangeJetTransport", ResourceType = typeof(Resources.App))]
     ShortRangeJetTransport,
-    [Display(Name = "Реактивный самолет средней дальности полета")]
+
+    [Display(Description = "MediumRangeJetTransport", ResourceType = typeof(Resources.App))]
     MediumRangeJetTransport,
-    [Display(Name = "Реактивный самолет большой дальности полета")]
+
+    [Display(Description = "LongRangeJetTransport", ResourceType = typeof(Resources.App))]
     LongRangeJetTransport,
-    [Display(Name = "Реактивный самолет сверхбольшой дальности полета")]
+
+    [Display(Description = "UltraLongRangeJetTransport", ResourceType = typeof(Resources.App))]
     UltraLongRangeJetTransport,
-    [Display(Name = "Истребитель")]
+
+    [Display(Description = "Fighter", ResourceType = typeof(Resources.App))]
     Fighter,
-    [Display(Name = "Сверхзвуковой крейсерский самолет")]
+
+    [Display(Description = "SupersonicCruise", ResourceType = typeof(Resources.App))]
     SupersonicCruise
-    
 }

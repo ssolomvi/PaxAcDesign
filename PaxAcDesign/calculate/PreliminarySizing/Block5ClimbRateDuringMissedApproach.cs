@@ -1,7 +1,7 @@
-﻿using Pax_AC_Design.ModuleCalculate.Handlers;
-using Pax_AC_Design.ModuleCalculate.Request;
+﻿using PaxAcDesign.calculate.datatype;
+using PaxAcDesign.calculate.Handlers;
 
-namespace pax_ac_design.ModuleCalculate.PreliminarySizing;
+namespace PaxAcDesign.calculate.PreliminarySizing;
 
 public class Block5ClimbRateDuringMissedApproach : AbstractHandler
 {
@@ -19,8 +19,8 @@ public class Block5ClimbRateDuringMissedApproach : AbstractHandler
         request.RequestPurpose.MinThrustToWeightRatioMissedApproach =
             request.RequestPurpose.MinThrustToWeightRatio2Segment
             * request.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio;
-        
-        
+
+
         return PassToNextHandler(request);
     }
 }

@@ -4,11 +4,9 @@ namespace PaxAcDesign.calculate.datatype;
 
 public enum EngineType
 {
-    
-    [Display(Name = "Турбореактивный двигатель")]
+    [Display(Description = "Turbojet", ResourceType = typeof(Resources.App))]
     Turbojet,
 
-    [Display(Name = "Турбовинтовой двигатель")]
+    [Display(Description = "Turboprop", ResourceType = typeof(Resources.App))]
     Turboprop
-    
 }

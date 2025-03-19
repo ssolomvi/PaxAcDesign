@@ -1,32 +1,42 @@
 using System.ComponentModel.DataAnnotations;
+
 namespace PaxAcDesign.calculate.datatype;
 
 public enum HighLiftDevice
 {
-    
-    [Display(Name = "Чистый аэродинамический профиль")]
+    [Display(Description = "CleanAirfoil", ResourceType = typeof(Resources.App))]
     CleanAirfoil,
-    [Display(Name = "Простой закрылок")]
+
+    [Display(Description = "PlainFlap", ResourceType = typeof(Resources.App))]
     PlainFlap,
-    [Display(Name = "Закрылок с одной прорезью")]
+
+    [Display(Description = "SingleSlottedFlap", ResourceType = typeof(Resources.App))]
     SingleSlottedFlap,
-    [Display(Name = "Закрылок с двумя прорезями")]
+
+    [Display(Description = "DoubleSlottedFlap", ResourceType = typeof(Resources.App))]
     DoubleSlottedFlap,
-    [Display(Name = "Разделенный закрылок")]
+
+    [Display(Description = "SplitFlap", ResourceType = typeof(Resources.App))]
     SplitFlap,
-    [Display(Name = "Двухкрылые юнкерсы")]
+
+    [Display(Description = "DoubleWingJunkers", ResourceType = typeof(Resources.App))]
     DoubleWingJunkers,
-    [Display(Name = "Закрылок Фаулера")]
+
+    [Display(Description = "FowlerFlap", ResourceType = typeof(Resources.App))]
     FowlerFlap,
-    [Display(Name = "Предкрылок")]
+
+    [Display(Description = "Slat", ResourceType = typeof(Resources.App))]
     Slat,
-    [Display(Name = "Простой закрылок и предкрылок")]
+
+    [Display(Description = "PlainFlapAndSlat", ResourceType = typeof(Resources.App))]
     PlainFlapAndSlat,
-    [Display(Name = "Закрылок с одной прорезью и предкрылок")]
+
+    [Display(Description = "SingleSlottedFlapAndSlat", ResourceType = typeof(Resources.App))]
     SingleSlottedFlapAndSlat,
-    [Display(Name = "Закрылок с двумя прорезями и предкрылок")]
+
+    [Display(Description = "DoubleSlottedFlapAndSlat", ResourceType = typeof(Resources.App))]
     DoubleSlottedFlapAndSlat,
-    [Display(Name = "Закрылок Фаулера и предкрылок")]
+
+    [Display(Description = "FowlerFlapAndSlat", ResourceType = typeof(Resources.App))]
     FowlerFlapAndSlat
-    
 }

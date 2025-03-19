@@ -1,5 +1,7 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersPurpose;
-using Request;
+﻿using PaxAcDesign.calculate.datatype;
+
+namespace PaxAcDesign.calculate.Handlers.HandlersPurpose;
+
 // тип самолета
 public class HandlerAircraftType : AbstractHandlerPurpose
 {
@@ -13,7 +15,7 @@ public class HandlerAircraftType : AbstractHandlerPurpose
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
+
         // do smth
 
         return PassToNextHandler(request);

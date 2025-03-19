@@ -1,17 +1,19 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Request;
+﻿namespace PaxAcDesign.calculate.datatype;
 
 public class Request : IRequest
 {
-
     public Request()
     {
-        
+        RequestAircraft = new RequestAircraft();
+        RequestEngine = new RequestEngine(EngineType.Turbojet, 0, 0.0);
+        RequestPrognosis = new RequestPrognosis();
+        RequestPurpose = new RequestPurpose(AircraftType.Fighter, HighLiftDevice.Slat, 0.0, 0.0, 0.0, 0.0, 0.0);
     }
-    
+
     public Request(
-        RequestAircraft requestAircraft, 
-        RequestEngine requestEngine, 
-        RequestPrognosis requestPrognosis, 
+        RequestAircraft requestAircraft,
+        RequestEngine requestEngine,
+        RequestPrognosis requestPrognosis,
         RequestPurpose requestPurpose)
     {
         RequestAircraft = requestAircraft;
@@ -19,13 +21,12 @@ public class Request : IRequest
         RequestPrognosis = requestPrognosis;
         RequestPurpose = requestPurpose;
     }
-    
-    public RequestAircraft? RequestAircraft { get; private set; }
 
-    public RequestEngine? RequestEngine { get; private set; }
+    public RequestAircraft? RequestAircraft { get; set; }
 
-    public RequestPrognosis? RequestPrognosis { get; private set; }
+    public RequestEngine? RequestEngine { get; set; }
 
-    public RequestPurpose? RequestPurpose { get; private set; }
+    public RequestPrognosis? RequestPrognosis { get; set; }
 
+    public RequestPurpose? RequestPurpose { get; set; }
 }

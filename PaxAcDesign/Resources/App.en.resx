@@ -118,123 +118,123 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BypassRatio" xml:space="preserve">
-    <value>Степень двухконтурности</value>
+    <value>Bypass ratio</value>
   </data>
   <data name="City" xml:space="preserve">
-    <value>Город</value>
+    <value>City</value>
   </data>
   <data name="Employee Data" xml:space="preserve">
-    <value>Данные о сотруднике</value>
+    <value>Employee Data</value>
   </data>
   <data name="EngineType" xml:space="preserve">
-    <value>Тип двигателя</value>
+    <value>Engine type</value>
   </data>
   <data name="Female" xml:space="preserve">
-    <value>Женщина</value>
+    <value>Female</value>
   </data>
   <data name="Gender" xml:space="preserve">
-    <value>Пол</value>
+    <value>Gender</value>
   </data>
   <data name="Joining Date" xml:space="preserve">
-    <value>Дата приема на работу</value>
+    <value>Joining Date</value>
   </data>
   <data name="Male" xml:space="preserve">
-    <value>Мужчина</value>
+    <value>Male</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Имя</value>
+    <value>Name</value>
   </data>
   <data name="NumberOfEngines" xml:space="preserve">
-    <value>Количество двигателей</value>
+    <value>Number of engines</value>
   </data>
   <data name="RequestEngine" xml:space="preserve">
-    <value>Данные о двигателе</value>
+    <value>Engine enter data</value>
   </data>
   <data name="Salary" xml:space="preserve">
-    <value>Зарплата</value>
+    <value>Salary</value>
   </data>
   <data name="Select Gender" xml:space="preserve">
-    <value>Выберите пол</value>
+    <value>Select Gender</value>
   </data>
   <data name="SelectEngineType" xml:space="preserve">
-    <value>Выберите тип двигателя</value>
+    <value>Select engine type</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Туториал от {0}</value>
+    <value>Tutorial by {0}</value>
   </data>
   <data name="Turbojet" xml:space="preserve">
-    <value>Турбореактивный двигатель</value>
+    <value>Turbojet</value>
   </data>
   <data name="Turboprop" xml:space="preserve">
-    <value>Турбовинтовой двигатель</value>
+    <value>Turboprop</value>
   </data>
   <data name="BusinessJet" xml:space="preserve">
-    <value>Самолет бизнес-класса</value>
+    <value>Business jet</value>
   </data>
   <data name="ShortRangeJetTransport" xml:space="preserve">
-    <value>Реактивный самолет малой дальности полета</value>
+    <value>Short range jet transport</value>
   </data>
   <data name="MediumRangeJetTransport" xml:space="preserve">
-    <value>Реактивный самолет средней дальности полета</value>
+    <value>Medium range jet transport</value>
   </data>
   <data name="LongRangeJetTransport" xml:space="preserve">
-    <value>Реактивный самолет большой дальности полета</value>
+    <value>Long range jet transport</value>
   </data>
   <data name="UltraLongRangeJetTransport" xml:space="preserve">
-    <value>Реактивный самолет сверхбольшой дальности полета</value>
+    <value>Ultra long range jet transport</value>
   </data>
   <data name="Fighter" xml:space="preserve">
-    <value>Истребитель</value>
+    <value>Fighter</value>
   </data>
   <data name="SupersonicCruise" xml:space="preserve">
-    <value>Сверхзвуковой крейсерский самолет</value>
+    <value>Supersonic cruise</value>
   </data>
   <data name="ShortRange" xml:space="preserve">
-    <value>Короткая дистанция</value>
+    <value>Short range</value>
   </data>
   <data name="MediumRange" xml:space="preserve">
-    <value>Средняя дистанция</value>
+    <value>Medium range</value>
   </data>
   <data name="LongRange" xml:space="preserve">
-    <value>Большая дистанция</value>
+    <value>Long range</value>
   </data>
   <data name="UltraLongRange" xml:space="preserve">
-    <value>Сверхбольшая дистанция</value>
+    <value>Ultra long range</value>
   </data>
   <data name="CleanAirfoil" xml:space="preserve">
-    <value>Чистый аэродинамический профиль</value>
+    <value>Clean airfoil</value>
   </data>
   <data name="PlainFlap" xml:space="preserve">
-    <value>Простой закрылок</value>
+    <value>Plain flap</value>
   </data>
   <data name="SingleSlottedFlap" xml:space="preserve">
-    <value>Закрылок с одной прорезью</value>
+    <value>Single slotted flap</value>
   </data>
   <data name="DoubleSlottedFlap" xml:space="preserve">
-    <value>Закрылок с двумя прорезями</value>
+    <value>Double slotted flap</value>
   </data>
   <data name="SplitFlap" xml:space="preserve">
-    <value>Разделенный закрылок</value>
+    <value>Split flap</value>
   </data>
   <data name="DoubleWingJunkers" xml:space="preserve">
-    <value>Двухкрылые юнкерсы</value>
+    <value>Double wing junkers</value>
   </data>
   <data name="FowlerFlap" xml:space="preserve">
-    <value>Закрылок Фаулера</value>
+    <value>Fowler flap</value>
   </data>
   <data name="Slat" xml:space="preserve">
-    <value>Предкрылок</value>
+    <value>Slat</value>
   </data>
   <data name="PlainFlapAndSlat" xml:space="preserve">
-    <value>Простой закрылок и предкрылок</value>
+    <value>Plain flap and slat</value>
   </data>
   <data name="SingleSlottedFlapAndSlat" xml:space="preserve">
-    <value>Закрылок с одной прорезью и предкрылок</value>
+    <value>Single slotted flap and slat</value>
   </data>
   <data name="DoubleSlottedFlapAndSlat" xml:space="preserve">
-    <value>Закрылок с двумя прорезями и предкрылок</value>
+    <value>Double slotted flap and slat</value>
   </data>
   <data name="FowlerFlapAndSlat" xml:space="preserve">
-    <value>Закрылок Фаулера и предкрылок</value>
+    <value>Fowler flap and slat</value>
   </data>
 </root>

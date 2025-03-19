@@ -1,6 +1,5 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersPurpose;
+﻿namespace PaxAcDesign.calculate.Handlers.HandlersPurpose;
 
 public abstract class AbstractHandlerPurpose : AbstractHandler, IHandlerPurpose
 {
-    
 }

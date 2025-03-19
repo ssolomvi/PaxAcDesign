@@ -1,7 +1,7 @@
-﻿using Pax_AC_Design.ModuleCalculate.Handlers;
-using Pax_AC_Design.ModuleCalculate.Request;
+﻿using PaxAcDesign.calculate.datatype;
+using PaxAcDesign.calculate.Handlers;
 
-namespace pax_ac_design.ModuleCalculate.PreliminarySizing;
+namespace PaxAcDesign.calculate.PreliminarySizing;
 
 public class Block3ClimbRateDuringSecondSegment : AbstractHandler
 {
@@ -14,7 +14,7 @@ public class Block3ClimbRateDuringSecondSegment : AbstractHandler
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
+
         // уклон набора высоты
         double climbGradient = 0.0;
         switch (request.RequestEngine.NumberOfEngines)
@@ -31,7 +31,7 @@ public class Block3ClimbRateDuringSecondSegment : AbstractHandler
         }
 
         request.RequestPurpose.ClimbAngle = double.Atan(climbGradient / 100);
-        
+
         // todo: как рассчитывать минимальное отношение тяги к весу T_TO / (m_MTO * g), если значение E считается в блоке 5.4?
 
         return PassToNextHandler(request);

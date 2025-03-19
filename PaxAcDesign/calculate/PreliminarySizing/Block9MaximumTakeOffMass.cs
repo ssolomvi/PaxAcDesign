@@ -1,9 +1,7 @@
-﻿using Pax_AC_Design.ModuleCalculate;
-using Pax_AC_Design.ModuleCalculate.Handlers;
-using Pax_AC_Design.ModuleCalculate.Request;
-using PaxAcDesign.calculate.datatype;
+﻿using PaxAcDesign.calculate.datatype;
+using PaxAcDesign.calculate.Handlers;
 
-namespace pax_ac_design.ModuleCalculate.PreliminarySizing;
+namespace PaxAcDesign.calculate.PreliminarySizing;
 
 public class Block9MaximumTakeOffMass : AbstractHandler
 {
@@ -16,14 +14,14 @@ public class Block9MaximumTakeOffMass : AbstractHandler
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
+
         // todo: заглушка! непонятно, что значит скорость V
-        double V = 155; 
-        
+        double V = 155;
+
         #region Относительная масса топлива (5.9.2)
 
         double relativeFuelMass;
-        
+
         double missionFuelFraction;
 
         double breguetRangeFactor;
@@ -45,16 +43,14 @@ public class Block9MaximumTakeOffMass : AbstractHandler
 
             // КПД воздушного винта
             double propellerEfficiency = 0;
-            
+
             breguetRangeFactor = request.RequestPurpose.LiftToDragRatioCruise * V
                                  / (performanceSpecificFuelConsumption * Globals.g);
         }
-        
-        
-        
+
         #endregion
-        
-        
+
+
         return PassToNextHandler(request);
     }
 }

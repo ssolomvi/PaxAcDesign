@@ -1,7 +1,6 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersEngine;
+﻿namespace PaxAcDesign.calculate.Handlers.HandlersEngine;
 
 // todo: переименовать
 public interface IHandleEngine
 {
-    
 }

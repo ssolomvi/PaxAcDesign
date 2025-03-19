@@ -1,6 +1,5 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersPrognosis;
+﻿namespace PaxAcDesign.calculate.Handlers.HandlersPrognosis;
 
 public interface IHandlerPrognosis
 {
-    
 }

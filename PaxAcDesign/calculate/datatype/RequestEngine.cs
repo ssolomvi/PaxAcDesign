@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using PaxAcDesign.calculate.datatype;
 
-namespace Pax_AC_Design.ModuleCalculate.Request;
+namespace PaxAcDesign.calculate.datatype;
 
 public class RequestEngine : IRequest
 {
     // тип двигателя                                                    BLOCK 1
     // [Required(ErrorMessage = "Engine type is required.")]
-    [Display(Name = "Тип двигателя")] public EngineType EngineType { get; set; } = EngineType.Turbojet;
+    [Display(Name = "EngineType", ResourceType = typeof(Resources.App))]
+    public EngineType EngineType { get; set; } = EngineType.Turbojet;
 
     // количество двигателей, n_E                                       BLOCK 3
     // [Required(ErrorMessage = "Number of engines is required.")]

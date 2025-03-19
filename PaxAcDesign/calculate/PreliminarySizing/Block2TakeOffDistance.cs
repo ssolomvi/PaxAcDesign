@@ -1,8 +1,7 @@
-﻿using Pax_AC_Design.ModuleCalculate.Handlers;
-using Pax_AC_Design.ModuleCalculate.Request;
-using PaxAcDesign.calculate.datatype;
+﻿using PaxAcDesign.calculate.datatype;
+using PaxAcDesign.calculate.Handlers;
 
-namespace pax_ac_design.ModuleCalculate.PreliminarySizing;
+namespace PaxAcDesign.calculate.PreliminarySizing;
 
 /**
  * В блоке 2 "Взлетный путь" рассчитывается минимальное значение отношения тяги к весу
@@ -22,13 +21,13 @@ public class Block2TakeOffDistance : AbstractHandler
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
+
         // коэффициент k_TO для расчета величины (T_TO / (m_MTO * g)) / (m_MTO / S_W), m^3/kg
         const double coefficientTakeOff = 2.34;
 
         // принимаем зависимость C_L,max,TO = 0,75 * C_L,max
         request.RequestPurpose.MaxLiftCoefficientTakeOff = 0.75 * request.RequestPurpose.MaxLiftCoefficient;
-            
+
         if (request.RequestEngine.EngineType is not EngineType.Turbojet)
         {
             // todo: что нужно записывать в поле request.RequestPurpose.ThrustToWeightAndWingLoadingRatio?
@@ -36,12 +35,12 @@ public class Block2TakeOffDistance : AbstractHandler
         }
 
         // todo: как считать s_TOG, если формула 5.9 используется для вывода отношения T/W ?
-            
+
         // принимаем зависимость s_TOFL = 1,5 * s_TOG
         request.RequestPurpose.TakeOffFieldLength = 1.5 * request.RequestPurpose.TakeOffGroundRoll;
-            
+
         // рассчет коэффициента зависимости тяговооруженности от нагрузки на крыло, (T_TO / (m_MTO * g)) / (m_MTO / S_W)
-        request.RequestPurpose.ThrustToWeightRatioAndWingLoadingCoefficient = 
+        request.RequestPurpose.ThrustToWeightRatioAndWingLoadingCoefficient =
             coefficientTakeOff /
             (request.RequestPurpose.TakeOffFieldLength
              * request.RequestPurpose.HeightAboveSeaLevel

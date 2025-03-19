@@ -1,6 +1,5 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersEngine;
+﻿namespace PaxAcDesign.calculate.Handlers.HandlersEngine;
 
 public abstract class AbstractHandlerEngine : AbstractHandler, IHandleEngine
 {
-    
 }

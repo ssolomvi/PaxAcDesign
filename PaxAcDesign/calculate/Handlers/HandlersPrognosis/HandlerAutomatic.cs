@@ -1,5 +1,7 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersPrognosis;
-using Request;
+﻿using PaxAcDesign.calculate.datatype;
+
+namespace PaxAcDesign.calculate.Handlers.HandlersPrognosis;
+
 // автоматический
 public class HandlerAutomatic : AbstractHandlerPrognosis
 {
@@ -13,7 +15,7 @@ public class HandlerAutomatic : AbstractHandlerPrognosis
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
+
         // do smth
 
         return PassToNextHandler(request);

@@ -2,46 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>PaxAcDesign</title>
-    <base href="/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="PaxAcDesign.styles.css" rel="stylesheet" />
+    <base href="/"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <!--    ui-->
+    <link href="PaxAcDesign.styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css"/>
+
 </head>
 
 <body>
-    <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
-    </div>
+<div id="app">
+    <svg class="loading-progress">
+        <circle r="40%" cx="50%" cy="50%"/>
+        <circle r="40%" cx="50%" cy="50%"/>
+    </svg>
+    <div class="loading-progress-text"></div>
+</div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <script src="_framework/blazor.webassembly.js"></script>
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+<script src="_framework/blazor.webassembly.js"></script>
 
 <!-- from https://phrase.com/blog/posts/blazor-webassembly-i18n/ -->
-    <script>
-        window.appCulture = {
-            get: () => window.localStorage['AppLanguage'],
-            set: (value) => window.localStorage['AppLanguage'] = value
-        };
-    </script>
-    <script>
-        window.employeeData = {
-            get: () => window.localStorage['empData'],
-            set: (value) => window.localStorage['empData'] = value
-        };
-    </script>
+<script>
+    window.appCulture = {
+        get: () => window.localStorage['AppLanguage'],
+        set: (value) => window.localStorage['AppLanguage'] = value
+    };
+</script>
+<script>
+    window.employeeData = {
+        get: () => window.localStorage['empData'],
+        set: (value) => window.localStorage['empData'] = value
+    };
+</script>
 <!-- end from -->
+<!-- ui -->
+<!--<script src="_content/MudBlazor/MudBlazor.min.js"></script>-->
+<script src="_content/Radzen.Blazor/Radzen.Blazor.js?v=@(typeof(Radzen.Colors).Assembly.GetName().Version)"></script>
 </body>
 
 </html>

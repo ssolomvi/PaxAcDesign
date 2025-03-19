@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using PaxAcDesign.calculate.datatype;
 
-namespace Pax_AC_Design.ModuleCalculate.Request;
+namespace PaxAcDesign.calculate.datatype;
 
 public class RequestPurpose : IRequest
 {

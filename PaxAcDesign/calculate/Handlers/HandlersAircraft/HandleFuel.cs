@@ -1,5 +1,6 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Handlers.handlersAircraft;
-using Request;
+﻿using PaxAcDesign.calculate.datatype;
+
+namespace PaxAcDesign.calculate.Handlers.HandlersAircraft;
 
 // топливо
 public class HandleFuel : AbstractHandlerAircraft
@@ -14,7 +15,7 @@ public class HandleFuel : AbstractHandlerAircraft
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
+
         // do smth
 
         return PassToNextHandler(request);

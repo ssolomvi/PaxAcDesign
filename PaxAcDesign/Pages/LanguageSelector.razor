@@ -3,22 +3,18 @@
 @inject NavigationManager Nav
 
 @* from https://phrase.com/blog/posts/blazor-webassembly-i18n/ *@
-<div class="col-md-7">
-    <select class="form-control" @bind="Culture">
-        @foreach (var language in supportedLanguages)
-        {
-            <option value="@language">@language.DisplayName</option>
-        }
-    </select>
+<div class="col-md-10">
+    <RadzenDropDown @bind-Value="Culture"
+                    TValue="CultureInfo"
+                    Data="@supportedLanguages"
+                    Style="width: 100%;"/>
 </div>
 
 @code
 {
     CultureInfo[] supportedLanguages = {
-        new CultureInfo("en-US"),
         new CultureInfo("ru-RU"),
-        new CultureInfo("fr-FR"),
-        new CultureInfo("ar-AE"),
+        new CultureInfo("en-US")
     };
 
     CultureInfo Culture

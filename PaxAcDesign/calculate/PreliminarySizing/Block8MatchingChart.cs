@@ -1,8 +1,9 @@
-﻿using Pax_AC_Design.ModuleCalculate.Handlers;
-using Pax_AC_Design.ModuleCalculate.Request;
+﻿using PaxAcDesign.calculate.datatype;
+using PaxAcDesign.calculate.Handlers;
+
 // using ZedGraph;
 
-namespace pax_ac_design.ModuleCalculate.PreliminarySizing;
+namespace PaxAcDesign.calculate.PreliminarySizing;
 
 public class Block8MatchingChart : AbstractHandler
 {
@@ -33,8 +34,9 @@ public class Block8MatchingChart : AbstractHandler
             {
                 altitudeUpper = altitudeCurr;
             }
-        } while (double.Abs(coefficient - request.RequestPurpose.ThrustToWeightRatioAndWingLoadingCoefficient) > 10E-09);
-        
+        } while (double.Abs(coefficient - request.RequestPurpose.ThrustToWeightRatioAndWingLoadingCoefficient) >
+                 10E-09);
+
         return (altitudeCurr, wingLoading, thrustToWeightRatio);
     }
 
@@ -42,14 +44,14 @@ public class Block8MatchingChart : AbstractHandler
     {
         return;
     }
-    
+
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-        
-        (request.RequestPurpose.AltitudeCruise, 
+
+        (request.RequestPurpose.AltitudeCruise,
                 request.RequestPurpose.WingLoading,
-                request.RequestPurpose.ThrustToWeightRatio) = 
+                request.RequestPurpose.ThrustToWeightRatio) =
             FindDesignPoint(request);
 
         if (request.RequestPurpose.WingLoading > request.RequestPurpose.MaxWingLoading ||
@@ -59,7 +61,7 @@ public class Block8MatchingChart : AbstractHandler
             // todo: что делать? кидать исключение? или завести какой-то флаг для этого в request
             return PassToNextHandler(request);
         }
-        
+
         return PassToNextHandler(request);
     }
 }

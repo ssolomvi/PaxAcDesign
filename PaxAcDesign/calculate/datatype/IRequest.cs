@@ -1,6 +1,5 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Request;
+﻿namespace PaxAcDesign.calculate.datatype;
 
 public interface IRequest
 {
-    
 }

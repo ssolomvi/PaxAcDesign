@@ -1,4 +1,4 @@
-﻿namespace Pax_AC_Design.ModuleCalculate.Request;
+﻿namespace PaxAcDesign.calculate.datatype;
 
 public class RequestPrognosis : IRequest
 {

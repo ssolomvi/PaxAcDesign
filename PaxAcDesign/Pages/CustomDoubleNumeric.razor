@@ -1,0 +1,56 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<App> Localize
+
+@if (Orientation == Orientation.Horizontal)
+{
+    <RadzenRow AlignItems="AlignItems.Center">
+        <RadzenColumn Size="12" SizeMD="4">
+            <RadzenLabel Text="@Localize[BindValueName]" Component="@BindValueComponentName"/>
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="8">
+            <RadzenNumeric @bind-value="@BindValue"
+                           TValue="double"
+                           Format="#.0000"
+                           Step="0.5"
+                           Style="width: 100%;"
+                           Name="@BindValueComponentName"/>
+        </RadzenColumn>
+    </RadzenRow>
+}
+else
+{
+    <RadzenStack Orientation="Orientation.Vertical" Gap="1rem">
+        <RadzenRow>
+            <RadzenLabel Text="@Localize[BindValueName]" Component="@BindValueComponentName"/>
+        </RadzenRow>
+        <RadzenRow>
+            <RadzenNumeric @bind-value="@BindValue"
+                           TValue="double"
+                           Format="#.0000"
+                           Step="0.5"
+                           Style="width: 100%;"
+                           Name="@BindValueComponentName"/>
+        </RadzenRow>
+    </RadzenStack>
+}
+
+
+
+@code {
+
+    [Parameter]
+    public double BindValue { get; set; }
+
+    [Parameter]
+    public string BindValueName { get; set; } = "";
+
+    [Parameter]
+    public Orientation Orientation { get; set; } = Orientation.Horizontal;
+
+    private string BindValueComponentName;
+
+    protected override void OnInitialized()
+    {
+        BindValueComponentName = $"{BindValueName}Numeric";
+    }
+
+}

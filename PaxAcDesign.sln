@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxAcDesign", "PaxAcDesign\PaxAcDesign.csproj", "{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}"
 EndProject
 Global
@@ -12,5 +15,8 @@ Global
 		{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

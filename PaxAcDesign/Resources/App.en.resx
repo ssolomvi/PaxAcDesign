@@ -148,7 +148,7 @@
     <value>Number of engines</value>
   </data>
   <data name="RequestEngine" xml:space="preserve">
-    <value>Engine enter data</value>
+    <value>Request engine</value>
   </data>
   <data name="Salary" xml:space="preserve">
     <value>Salary</value>
@@ -236,5 +236,59 @@
   </data>
   <data name="FowlerFlapAndSlat" xml:space="preserve">
     <value>Fowler flap and slat</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="Block1Result" xml:space="preserve">
+    <value>First block calculation result</value>
+  </data>
+  <data name="MaxLiftCoefficient" xml:space="preserve">
+    <value>Max lift coefficient</value>
+  </data>
+  <data name="MaxLandingMassToMaxTakeOffMassRatio" xml:space="preserve">
+    <value>Max landing mass to max takeoff mass ratio</value>
+  </data>
+  <data name="MaxWingLoading" xml:space="preserve">
+    <value>Max wing loading</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next step</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous step</value>
+  </data>
+  <data name="RequestPurpose" xml:space="preserve">
+    <value>Request purpose</value>
+  </data>
+  <data name="AircraftType" xml:space="preserve">
+    <value>Aircraft type</value>
+  </data>
+  <data name="SelectAircraftType" xml:space="preserve">
+    <value>Select aircraft type</value>
+  </data>
+  <data name="HighLiftDevice" xml:space="preserve">
+    <value>High lift device</value>
+  </data>
+  <data name="SelectHighLiftDevice" xml:space="preserve">
+    <value>Select high lift device</value>
+  </data>
+  <data name="HeightAboveSeaLevel" xml:space="preserve">
+    <value>Height above sea level</value>
+  </data>
+  <data name="LandingDistance" xml:space="preserve">
+    <value>Landing distance</value>
+  </data>
+  <data name="TakeOffGroundRoll" xml:space="preserve">
+    <value>Take off ground roll</value>
+  </data>
+  <data name="WingAspectRatio" xml:space="preserve">
+    <value>Wing aspect ratio</value>
+  </data>
+  <data name="WingWettedArea" xml:space="preserve">
+    <value>Wing wetted area</value>
+  </data>
+  <data name="Step" xml:space="preserve">
+    <value>Step</value>
   </data>
 </root>

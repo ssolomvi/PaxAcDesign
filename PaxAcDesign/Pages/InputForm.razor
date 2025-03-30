@@ -14,153 +14,273 @@
 else
 {
     <RadzenSteps Change=@OnChange CanChange="@CanChange" NextText="@Localize["Next"]" PreviousText="@Localize["Previous"]">
-        <Steps>
-            <RadzenStepsItem Text="@string.Format("{0} 1", Localize["Step"])">
-                <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
-                    <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep1(args); })">
-                        <RadzenRow Gap="2rem">
-                            <RadzenStack>
-                                <RadzenFieldset Text="@string.Format("{0}1", Localize["FieldsetDescription"])">
-                                    <RadzenStack Gap="1rem">
-                                        <RadzenRow AlignItems="AlignItems.Center">
-                                            <RadzenColumn Size="12" SizeMD="4">
-                                                <RadzenLabel Text="@Localize["AircraftType"]" Component="AircraftTypeDropDown"/>
-                                            </RadzenColumn>
-                                            <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenDropDown @bind-value="DataRequest.RequestPurpose.AircraftType"
-                                                                TValue="AircraftType"
-                                                                AllowClear="true"
-                                                                Placeholder="@Localize["SelectAircraftType"]"
-                                                                Data="@(Enum.GetValues(typeof(AircraftType)).Cast<Enum>())"
-                                                                Style="width: 100%;"
-                                                                Name="AircraftTypeDropDown">
-                                                </RadzenDropDown>
-                                            </RadzenColumn>
-                                        </RadzenRow>
-                                        <RadzenRow AlignItems="AlignItems.Center">
-                                            <RadzenColumn Size="12" SizeMD="4">
-                                                <RadzenLabel Text="@Localize["EngineType"]" Component="EngineTypeDropDown"/>
-                                            </RadzenColumn>
-                                            <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenDropDown @bind-value="DataRequest.RequestEngine.EngineType"
-                                                                TValue="EngineType"
-                                                                AllowClear="true"
-                                                                Placeholder="@Localize["SelectEngineType"]"
-                                                                Data="@(Enum.GetValues(typeof(EngineType)).Cast<Enum>())"
-                                                                Style="width: 100%;"
-                                                                Name="EngineTypeDropDown">
-                                                </RadzenDropDown>
-                                            </RadzenColumn>
-                                        </RadzenRow>
-                                        <RadzenRow AlignItems="AlignItems.Center">
-                                            <RadzenColumn Size="12" SizeMD="4">
-                                                <RadzenLabel Text="@Localize["HighLiftDevice"]" Component="HighLiftDeviceDropDown"/>
-                                            </RadzenColumn>
-                                            <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenDropDown @bind-value="DataRequest.RequestPurpose.HighLiftDevice"
-                                                                TValue="HighLiftDevice"
-                                                                AllowClear="true"
-                                                                Placeholder="@Localize["SelectHighLiftDevice"]"
-                                                                Data="@(Enum.GetValues(typeof(HighLiftDevice)).Cast<Enum>())"
-                                                                Style="width: 100%;"
-                                                                Name="HighLiftDeviceDropDown">
-                                                </RadzenDropDown>
-                                            </RadzenColumn>
-                                        </RadzenRow>
-                                        <CustomDoubleNumeric BindValue="DataRequest.RequestPurpose.HeightAboveSeaLevel" BindValueName="@Localize["HeightAboveSeaLevel"]"/>
-                                        <CustomDoubleNumeric BindValue="DataRequest.RequestPurpose.LandingDistance" BindValueName="@Localize["LandingDistance"]"/>
-                                    </RadzenStack>
-                                </RadzenFieldset>
-                            </RadzenStack>
-                        </RadzenRow>
-                        <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
-                            <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
-                        </RadzenStack>
-                    </RadzenTemplateForm>
-                    @* <RadzenColumn Size="12" SizeMD="6"> *@
-                    <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
-                        <RadzenFieldset Text="@Localize["Block1Result"]">
+    <Steps>
+    <RadzenStepsItem Text="@string.Format("{0} 1", Localize["Step"])">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep1(args); })">
+                <RadzenRow Gap="2rem">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@string.Format("{0}1", Localize["FieldsetDescription"])">
                             <RadzenStack Gap="1rem">
-                                <CustomDoubleNumericRepresentation BindValue="DataRequest.RequestPurpose.MaxLiftCoefficient" BindValueName="MaxLiftCoefficient" Orientation="Orientation.Vertical"/>
-                                <CustomDoubleNumericRepresentation BindValue="DataRequest.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio" BindValueName="MaxLandingMassToMaxTakeOffMassRatio" Orientation="Orientation.Vertical"/>
-                                <CustomDoubleNumericRepresentation BindValue="DataRequest.RequestPurpose.MaxWingLoading" BindValueName="MaxWingLoading" Orientation="Orientation.Vertical"/>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["AircraftType"]" Component="AircraftTypeDropDown"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenDropDown @bind-value="DataRequest.RequestPurpose.AircraftType"
+                                                        TValue="AircraftType"
+                                                        AllowClear="true"
+                                                        Placeholder="@Localize["SelectAircraftType"]"
+                                                        Data="@(Enum.GetValues(typeof(AircraftType)).Cast<Enum>())"
+                                                        Style="width: 100%;"
+                                                        Name="AircraftTypeDropDown">
+                                        </RadzenDropDown>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["EngineType"]" Component="EngineTypeDropDown"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenDropDown @bind-value="DataRequest.RequestEngine.EngineType"
+                                                        TValue="EngineType"
+                                                        AllowClear="true"
+                                                        Placeholder="@Localize["SelectEngineType"]"
+                                                        Data="@(Enum.GetValues(typeof(EngineType)).Cast<Enum>())"
+                                                        Style="width: 100%;"
+                                                        Name="EngineTypeDropDown">
+                                        </RadzenDropDown>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["HighLiftDevice"]" Component="HighLiftDeviceDropDown"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenDropDown @bind-value="DataRequest.RequestPurpose.HighLiftDevice"
+                                                        TValue="HighLiftDevice"
+                                                        AllowClear="true"
+                                                        Placeholder="@Localize["SelectHighLiftDevice"]"
+                                                        Data="@(Enum.GetValues(typeof(HighLiftDevice)).Cast<Enum>())"
+                                                        Style="width: 100%;"
+                                                        Name="HighLiftDeviceDropDown">
+                                        </RadzenDropDown>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["HeightAboveSeaLevel"]" Component="HeightAboveSeaLevelNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.HeightAboveSeaLevel"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="HeightAboveSeaLevelNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["LandingDistance"]" Component="LandingDistanceNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.LandingDistance"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="LandingDistanceNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
                             </RadzenStack>
                         </RadzenFieldset>
                     </RadzenStack>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@string.Format("{0} 2", Localize["Step"])"
-                             Disabled="@(DataRequest.RequestPurpose == null || DataRequest.RequestPurpose.MaxLiftCoefficient == 0.0 || DataRequest.RequestPurpose?.MaxLandingMassToMaxTakeOffMassRatio == 0.0 || DataRequest.RequestPurpose?.MaxWingLoading == 0.0)">
-                <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep2(args); })">
-                    <RadzenRow Gap="2rem" class="rz-p-0 rz-p-lg-4">
-                        <RadzenColumn Size="12" SizeMD="6">
-                            <RadzenStack>
-                                <RadzenFieldset Text="@Localize["RequestPurpose"]">
-                                    <RadzenStack Gap="1rem">
-                                        <RadzenRow AlignItems="AlignItems.Center">
-                                            <RadzenColumn Size="12" SizeMD="4">
-                                                <RadzenLabel Text="@Localize["AircraftType"]" Component="AircraftTypeDropDown"/>
-                                            </RadzenColumn>
-                                            <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenDropDown @bind-value="DataRequest.RequestPurpose.AircraftType"
-                                                                TValue="AircraftType"
-                                                                AllowClear="true"
-                                                                Placeholder="@Localize["SelectAircraftType"]"
-                                                                Data="@(Enum.GetValues(typeof(AircraftType)).Cast<Enum>())"
-                                                                Style="width: 100%;"
-                                                                Name="AircraftTypeDropDown">
-                                                </RadzenDropDown>
-                                            </RadzenColumn>
-                                        </RadzenRow>
-                                        <RadzenRow AlignItems="AlignItems.Center">
-                                            <RadzenColumn Size="12" SizeMD="4">
-                                                <RadzenLabel Text="@Localize["HighLiftDevice"]" Component="HighLiftDeviceDropDown"/>
-                                            </RadzenColumn>
-                                            <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenDropDown @bind-value="DataRequest.RequestPurpose.HighLiftDevice"
-                                                                TValue="HighLiftDevice"
-                                                                AllowClear="true"
-                                                                Placeholder="@Localize["SelectHighLiftDevice"]"
-                                                                Data="@(Enum.GetValues(typeof(HighLiftDevice)).Cast<Enum>())"
-                                                                Style="width: 100%;"
-                                                                Name="HighLiftDeviceDropDown">
-                                                </RadzenDropDown>
-                                            </RadzenColumn>
-                                        </RadzenRow>
-                                        <CustomDoubleNumeric BindValue="DataRequest.RequestPurpose.HeightAboveSeaLevel" BindValueName="HeightAboveSeaLevel"/>
-                                        <CustomDoubleNumeric BindValue="DataRequest.RequestPurpose.LandingDistance" BindValueName="LandingDistance"/>
-                                        <CustomDoubleNumeric BindValue="DataRequest.RequestPurpose.TakeOffGroundRoll" BindValueName="TakeOffGroundRoll"/>
-                                        <CustomDoubleNumeric BindValue="DataRequest.RequestPurpose.WingAspectRatio" BindValueName="WingAspectRatio"/>
-                                        <CustomDoubleNumeric BindValue="DataRequest.RequestPurpose.WingWettedArea" BindValueName="WingWettedArea"/>
-                                    </RadzenStack>
-                                </RadzenFieldset>
+            </RadzenTemplateForm>
+            @* <RadzenColumn Size="12" SizeMD="6"> *@
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["Block1Result"]">
+                    <RadzenStack Gap="1rem">
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="@Localize["MaxLiftCoefficient"]" Component="MaxLiftCoefficientNumeric"/>
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenNumeric @bind-value="DataRequest.RequestPurpose.MaxLiftCoefficient"
+                                               TValue="double"
+                                               Format="#.0000"
+                                               Step="0.5"
+                                               Style="width: 100%;"
+                                               Name="MaxLiftCoefficientNumeric"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="@Localize["MaxLandingMassToMaxTakeOffMassRatio"]" Component="MaxLandingMassToMaxTakeOffMassRatioNumeric"/>
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenNumeric @bind-value="DataRequest.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio"
+                                               TValue="double"
+                                               Format="#.0000"
+                                               Step="0.5"
+                                               Style="width: 100%;"
+                                               Name="MaxLandingMassToMaxTakeOffMassRatioNumeric"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow AlignItems="AlignItems.Center">
+                            <RadzenColumn Size="12" SizeMD="4">
+                                <RadzenLabel Text="@Localize["MaxWingLoading"]" Component="MaxWingLoadingNumeric"/>
+                            </RadzenColumn>
+                            <RadzenColumn Size="12" SizeMD="8">
+                                <RadzenNumeric @bind-value="DataRequest.RequestPurpose.MaxLiftCoefficient"
+                                               TValue="double"
+                                               Format="#.0000"
+                                               Step="0.5"
+                                               Style="width: 100%;"
+                                               Name="MaxWingLoadingNumeric"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 2", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose == null || DataRequest.RequestPurpose.MaxLiftCoefficient == 0.0 || DataRequest.RequestPurpose?.MaxLandingMassToMaxTakeOffMassRatio == 0.0 || DataRequest.RequestPurpose?.MaxWingLoading == 0.0)">
+        <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep2(args); })">
+            <RadzenRow Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenColumn Size="12" SizeMD="6">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@Localize["RequestPurpose"]">
+                            <RadzenStack Gap="1rem">
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["AircraftType"]" Component="AircraftTypeDropDown"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenDropDown @bind-value="DataRequest.RequestPurpose.AircraftType"
+                                                        TValue="AircraftType"
+                                                        AllowClear="true"
+                                                        Placeholder="@Localize["SelectAircraftType"]"
+                                                        Data="@(Enum.GetValues(typeof(AircraftType)).Cast<Enum>())"
+                                                        Style="width: 100%;"
+                                                        Name="AircraftTypeDropDown">
+                                        </RadzenDropDown>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["HighLiftDevice"]" Component="HighLiftDeviceDropDown"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenDropDown @bind-value="DataRequest.RequestPurpose.HighLiftDevice"
+                                                        TValue="HighLiftDevice"
+                                                        AllowClear="true"
+                                                        Placeholder="@Localize["SelectHighLiftDevice"]"
+                                                        Data="@(Enum.GetValues(typeof(HighLiftDevice)).Cast<Enum>())"
+                                                        Style="width: 100%;"
+                                                        Name="HighLiftDeviceDropDown">
+                                        </RadzenDropDown>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["HeightAboveSeaLevel"]" Component="HeightAboveSeaLevelNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.HeightAboveSeaLevel"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="HeightAboveSeaLevelNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["LandingDistance"]" Component="LandingDistanceNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.LandingDistance"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="LandingDistanceNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["TakeOffGroundRoll"]" Component="TakeOffGroundRollNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.TakeOffGroundRoll"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="TakeOffGroundRollNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["WingAspectRatio"]" Component="WingAspectRatioNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.WingAspectRatio"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="WingAspectRatioNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["WingWettedArea"]" Component="WingWettedAreaNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.WingWettedArea"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="WingWettedAreaNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
                             </RadzenStack>
-                        </RadzenColumn>
-                    </RadzenRow>
-                </RadzenTemplateForm>
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@string.Format("{0} 3", Localize["Step"])"
-                             Disabled="@(DataRequest.RequestPurpose?.MaxLiftCoefficientTakeOff == 0.0 || DataRequest.RequestPurpose?.ThrustToWeightRatioAndWingLoadingCoefficient == 0.0)">
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@string.Format("{0} 4", Localize["Step"])"
-                             Disabled="@(DataRequest.RequestPurpose?.ClimbAngle == 0.0)">
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@string.Format("{0} 5", Localize["Step"])"
-                             Disabled="@(DataRequest.RequestPurpose?.LiftToDragRatio == 0.0 || DataRequest.RequestPurpose?.MinThrustToWeightRatio2Segment == 0.0)">
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@string.Format("{0} 6", Localize["Step"])"
-                             Disabled="@(DataRequest.RequestPurpose?.MinThrustToWeightRatioMissedApproach == 0.0)">
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@string.Format("{0} 7", Localize["Step"])"
-                             Disabled="@(DataRequest.RequestPurpose?.LiftToDragRatioCruise == 0.0)">
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@string.Format("{0} 8", Localize["Step"])"
-                             Disabled="@(DataRequest.RequestPurpose?.ThrustToWeightFunctionCruise == null || DataRequest.RequestPurpose?.WingLoadingFunctionCruise == null)">
-            </RadzenStepsItem>
-            <RadzenStepsItem Text="@Localize["MatchingChart"]"
-                                         Disabled="@(DataRequest.RequestPurpose?.ThrustToWeightFunctionCruise == null || DataRequest.RequestPurpose?.WingLoadingFunctionCruise == null)">
-                        </RadzenStepsItem>
-        </Steps>
+                        </RadzenFieldset>
+                    </RadzenStack>
+                </RadzenColumn>
+            </RadzenRow>
+        </RadzenTemplateForm>
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 3", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose?.MaxLiftCoefficientTakeOff == 0.0 || DataRequest.RequestPurpose?.ThrustToWeightRatioAndWingLoadingCoefficient == 0.0)">
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 4", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose?.ClimbAngle == 0.0)">
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 5", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose?.LiftToDragRatio == 0.0 || DataRequest.RequestPurpose?.MinThrustToWeightRatio2Segment == 0.0)">
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 6", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose?.MinThrustToWeightRatioMissedApproach == 0.0)">
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 7", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose?.LiftToDragRatioCruise == 0.0)">
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 8", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose?.ThrustToWeightFunctionCruise == null || DataRequest.RequestPurpose?.WingLoadingFunctionCruise == null)">
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@Localize["MatchingChart"]"
+                     Disabled="@(DataRequest.RequestPurpose?.ThrustToWeightFunctionCruise == null || DataRequest.RequestPurpose?.WingLoadingFunctionCruise == null)">
+    </RadzenStepsItem>
+    </Steps>
     </RadzenSteps>
 }
 
@@ -178,6 +298,7 @@ else
     async void CalculateStep1(Request arg)
     {
         console.Log("Going to calculate step 1");
+        console.Log($"HeightAboveSeaLevel: {DataRequest?.RequestPurpose?.HeightAboveSeaLevel}");
 
     // calculate block 1, generate form for printing results on the same page
         var block1LandingDistance = new Block1LandingDistance();
@@ -210,11 +331,10 @@ else
     {
         if (args.SelectedIndex == 0)
         {
-            if (DataRequest.RequestPurpose.MaxLiftCoefficient != 0.0
-                && DataRequest.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio != 0.0
-                && DataRequest.RequestPurpose.MaxWingLoading != 0.0)
+            if (DataRequest?.RequestPurpose?.MaxLiftCoefficient != 0.0
+                && DataRequest?.RequestPurpose?.MaxLandingMassToMaxTakeOffMassRatio != 0.0
+                && DataRequest?.RequestPurpose?.MaxWingLoading != 0.0)
             {
-                
             }
         }
     }

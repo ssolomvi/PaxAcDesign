@@ -1,3 +1,6 @@
+[Radzen documentation](https://blazor.radzen.com/get-started)
+[Data flow](https://miro.com/app/board/uXjVIT4Xn-E=/)
+
 [Enum handling in Radzen](https://blazor.radzen.com/dropdown-custom-objects?theme=material3)
 
 [Localization](https://phrase.com/blog/posts/blazor-webassembly-i18n/)

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\c_sharp\\PaxAcDesign\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\resources\\app.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\resources\\app.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\pages\\inputform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\pages\\inputform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\calculate\\datatype\\requestpurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\calculate\\datatype\\requestpurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\Component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PaxAcDesign\\Pages\\Component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 281,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +38,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.resx",
+              "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Resources\\App.resx",
+              "RelativeDocumentMoniker": "PaxAcDesign\\Resources\\App.resx",
+              "ToolTip": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Resources\\App.resx",
+              "RelativeToolTip": "PaxAcDesign\\Resources\\App.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-31T04:34:34.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "RequestPurpose.cs",
               "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\calculate\\datatype\\RequestPurpose.cs",
@@ -42,18 +58,17 @@
               "RelativeToolTip": "PaxAcDesign\\calculate\\datatype\\RequestPurpose.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAkwB8AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T09:04:05.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T09:04:05.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InputForm.razor",
               "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\InputForm.razor",
               "RelativeDocumentMoniker": "PaxAcDesign\\Pages\\InputForm.razor",
               "ToolTip": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\InputForm.razor",
               "RelativeToolTip": "PaxAcDesign\\Pages\\InputForm.razor",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC8AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-19T09:01:13.732Z",
               "EditorCaption": ""
@@ -70,16 +85,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Component.razor",
               "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\Component.razor",
               "RelativeDocumentMoniker": "PaxAcDesign\\Pages\\Component.razor",
               "ToolTip": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\Component.razor",
               "RelativeToolTip": "PaxAcDesign\\Pages\\Component.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-19T09:38:19.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T09:38:19.902Z"
             }
           ]
         }

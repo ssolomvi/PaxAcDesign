@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\c_sharp\\PaxAcDesign\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\pages\\inputform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\pages\\inputform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\resources\\app.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\resources\\app.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|solutionrelative:paxacdesign\\pages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4AAD9BB-F20F-4A28-BE8F-EF5B26B4689E}|PaxAcDesign\\PaxAcDesign.csproj|c:\\c_sharp\\paxacdesign\\paxacdesign\\calculate\\datatype\\requestpurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,25 +21,20 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 281,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Component.razor",
-              "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\Component.razor",
-              "RelativeDocumentMoniker": "PaxAcDesign\\Pages\\Component.razor",
-              "ToolTip": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\Component.razor",
-              "RelativeToolTip": "PaxAcDesign\\Pages\\Component.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-19T09:38:19.902Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "RequestPurpose.cs",
               "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\calculate\\datatype\\RequestPurpose.cs",
               "RelativeDocumentMoniker": "PaxAcDesign\\calculate\\datatype\\RequestPurpose.cs",
@@ -56,13 +47,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "InputForm.razor",
               "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\InputForm.razor",
               "RelativeDocumentMoniker": "PaxAcDesign\\Pages\\InputForm.razor",
               "ToolTip": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\InputForm.razor",
               "RelativeToolTip": "PaxAcDesign\\Pages\\InputForm.razor",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAABsAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-19T09:01:13.732Z",
               "EditorCaption": ""
@@ -70,19 +61,24 @@
           ]
         },
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 319,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.resx",
-              "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Resources\\App.resx",
-              "RelativeDocumentMoniker": "PaxAcDesign\\Resources\\App.resx",
-              "ToolTip": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Resources\\App.resx",
-              "RelativeToolTip": "PaxAcDesign\\Resources\\App.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-03-19T09:00:43.802Z",
+              "DocumentIndex": 1,
+              "Title": "Component.razor",
+              "DocumentMoniker": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\Component.razor",
+              "RelativeDocumentMoniker": "PaxAcDesign\\Pages\\Component.razor",
+              "ToolTip": "C:\\c_sharp\\PaxAcDesign\\PaxAcDesign\\Pages\\Component.razor",
+              "RelativeToolTip": "PaxAcDesign\\Pages\\Component.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T09:38:19.902Z",
               "EditorCaption": ""
             }
           ]

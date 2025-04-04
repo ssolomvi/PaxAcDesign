@@ -101,48 +101,38 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            @* <RadzenColumn Size="12" SizeMD="6"> *@
             <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
-                <RadzenFieldset Text="@Localize["Block1Result"]">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
-                        <RadzenRow AlignItems="AlignItems.Center">
-                            <RadzenColumn Size="12" SizeMD="4">
-                                <RadzenLabel Text="@Localize["MaxLiftCoefficient"]" Component="MaxLiftCoefficientNumeric"/>
-                            </RadzenColumn>
-                            <RadzenColumn Size="12" SizeMD="8">
-                                <RadzenNumeric @bind-value="DataRequest.RequestPurpose.MaxLiftCoefficient"
-                                               TValue="double"
-                                               Format="#.0000"
-                                               Step="0.5"
-                                               Style="width: 100%;"
-                                               Name="MaxLiftCoefficientNumeric"/>
-                            </RadzenColumn>
+                        <RadzenRow>
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenRow>
+                                    <RadzenText Text="@Localize["MaxLiftCoefficient"]"/>
+                                </RadzenRow>
+                                <RadzenRow>
+                                    <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@DataRequest.RequestPurpose.MaxLiftCoefficient.ToString("F4")" Style="width: 100%;" TagName="TagName.P"/>
+                                </RadzenRow>
+                            </RadzenStack>
                         </RadzenRow>
-                        <RadzenRow AlignItems="AlignItems.Center">
-                            <RadzenColumn Size="12" SizeMD="4">
-                                <RadzenLabel Text="@Localize["MaxLandingMassToMaxTakeOffMassRatio"]" Component="MaxLandingMassToMaxTakeOffMassRatioNumeric"/>
-                            </RadzenColumn>
-                            <RadzenColumn Size="12" SizeMD="8">
-                                <RadzenNumeric @bind-value="DataRequest.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio"
-                                               TValue="double"
-                                               Format="#.0000"
-                                               Step="0.5"
-                                               Style="width: 100%;"
-                                               Name="MaxLandingMassToMaxTakeOffMassRatioNumeric"/>
-                            </RadzenColumn>
+                        <RadzenRow>
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenRow>
+                                    <RadzenText Text="@Localize["MaxLandingMassToMaxTakeOffMassRatio"]"/>
+                                </RadzenRow>
+                                <RadzenRow>
+                                    <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@DataRequest.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio.ToString("F4")" Style="width: 100%;" TagName="TagName.P"/>
+                                </RadzenRow>
+                            </RadzenStack>
                         </RadzenRow>
-                        <RadzenRow AlignItems="AlignItems.Center">
-                            <RadzenColumn Size="12" SizeMD="4">
-                                <RadzenLabel Text="@Localize["MaxWingLoading"]" Component="MaxWingLoadingNumeric"/>
-                            </RadzenColumn>
-                            <RadzenColumn Size="12" SizeMD="8">
-                                <RadzenNumeric @bind-value="DataRequest.RequestPurpose.MaxLiftCoefficient"
-                                               TValue="double"
-                                               Format="#.0000"
-                                               Step="0.5"
-                                               Style="width: 100%;"
-                                               Name="MaxWingLoadingNumeric"/>
-                            </RadzenColumn>
+                        <RadzenRow>
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenRow>
+                                    <RadzenText Text="@Localize["MaxWingLoading"]"/>
+                                </RadzenRow>
+                                <RadzenRow>
+                                    <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@DataRequest.RequestPurpose.MaxWingLoading.ToString("F4")" Style="width: 100%;" TagName="TagName.P"/>
+                                </RadzenRow>
+                            </RadzenStack>
                         </RadzenRow>
                     </RadzenStack>
                 </RadzenFieldset>
@@ -151,68 +141,12 @@ else
     </RadzenStepsItem>
     <RadzenStepsItem Text="@string.Format("{0} 2", Localize["Step"])"
                      Disabled="@(DataRequest.RequestPurpose == null || DataRequest.RequestPurpose.MaxLiftCoefficient == 0.0 || DataRequest.RequestPurpose?.MaxLandingMassToMaxTakeOffMassRatio == 0.0 || DataRequest.RequestPurpose?.MaxWingLoading == 0.0)">
-        <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep2(args); })">
-            <RadzenRow Gap="2rem" class="rz-p-0 rz-p-lg-4">
-                <RadzenColumn Size="12" SizeMD="6">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep2(args); })">
+                <RadzenRow Gap="2rem">
                     <RadzenStack>
-                        <RadzenFieldset Text="@Localize["RequestPurpose"]">
+                        <RadzenFieldset Text="@string.Format("{0}2", Localize["FieldsetDescription"])">
                             <RadzenStack Gap="1rem">
-                                <RadzenRow AlignItems="AlignItems.Center">
-                                    <RadzenColumn Size="12" SizeMD="4">
-                                        <RadzenLabel Text="@Localize["AircraftType"]" Component="AircraftTypeDropDown"/>
-                                    </RadzenColumn>
-                                    <RadzenColumn Size="12" SizeMD="8">
-                                        <RadzenDropDown @bind-value="DataRequest.RequestPurpose.AircraftType"
-                                                        TValue="AircraftType"
-                                                        AllowClear="true"
-                                                        Placeholder="@Localize["SelectAircraftType"]"
-                                                        Data="@(Enum.GetValues(typeof(AircraftType)).Cast<Enum>())"
-                                                        Style="width: 100%;"
-                                                        Name="AircraftTypeDropDown">
-                                        </RadzenDropDown>
-                                    </RadzenColumn>
-                                </RadzenRow>
-                                <RadzenRow AlignItems="AlignItems.Center">
-                                    <RadzenColumn Size="12" SizeMD="4">
-                                        <RadzenLabel Text="@Localize["HighLiftDevice"]" Component="HighLiftDeviceDropDown"/>
-                                    </RadzenColumn>
-                                    <RadzenColumn Size="12" SizeMD="8">
-                                        <RadzenDropDown @bind-value="DataRequest.RequestPurpose.HighLiftDevice"
-                                                        TValue="HighLiftDevice"
-                                                        AllowClear="true"
-                                                        Placeholder="@Localize["SelectHighLiftDevice"]"
-                                                        Data="@(Enum.GetValues(typeof(HighLiftDevice)).Cast<Enum>())"
-                                                        Style="width: 100%;"
-                                                        Name="HighLiftDeviceDropDown">
-                                        </RadzenDropDown>
-                                    </RadzenColumn>
-                                </RadzenRow>
-                                <RadzenRow AlignItems="AlignItems.Center">
-                                    <RadzenColumn Size="12" SizeMD="4">
-                                        <RadzenLabel Text="@Localize["HeightAboveSeaLevel"]" Component="HeightAboveSeaLevelNumeric"/>
-                                    </RadzenColumn>
-                                    <RadzenColumn Size="12" SizeMD="8">
-                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.HeightAboveSeaLevel"
-                                                       TValue="double"
-                                                       Format="#.0000"
-                                                       Step="0.5"
-                                                       Style="width: 100%;"
-                                                       Name="HeightAboveSeaLevelNumeric"/>
-                                    </RadzenColumn>
-                                </RadzenRow>
-                                <RadzenRow AlignItems="AlignItems.Center">
-                                    <RadzenColumn Size="12" SizeMD="4">
-                                        <RadzenLabel Text="@Localize["LandingDistance"]" Component="LandingDistanceNumeric"/>
-                                    </RadzenColumn>
-                                    <RadzenColumn Size="12" SizeMD="8">
-                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.LandingDistance"
-                                                       TValue="double"
-                                                       Format="#.0000"
-                                                       Step="0.5"
-                                                       Style="width: 100%;"
-                                                       Name="LandingDistanceNumeric"/>
-                                    </RadzenColumn>
-                                </RadzenRow>
                                 <RadzenRow AlignItems="AlignItems.Center">
                                     <RadzenColumn Size="12" SizeMD="4">
                                         <RadzenLabel Text="@Localize["TakeOffGroundRoll"]" Component="TakeOffGroundRollNumeric"/>
@@ -226,56 +160,204 @@ else
                                                        Name="TakeOffGroundRollNumeric"/>
                                     </RadzenColumn>
                                 </RadzenRow>
-                                <RadzenRow AlignItems="AlignItems.Center">
-                                    <RadzenColumn Size="12" SizeMD="4">
-                                        <RadzenLabel Text="@Localize["WingAspectRatio"]" Component="WingAspectRatioNumeric"/>
-                                    </RadzenColumn>
-                                    <RadzenColumn Size="12" SizeMD="8">
-                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.WingAspectRatio"
-                                                       TValue="double"
-                                                       Format="#.0000"
-                                                       Step="0.5"
-                                                       Style="width: 100%;"
-                                                       Name="WingAspectRatioNumeric"/>
-                                    </RadzenColumn>
+                            </RadzenStack>
+                        </RadzenFieldset>
+                    </RadzenStack>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
+                    <RadzenStack Gap="1rem">
+                        <RadzenRow>
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenRow>
+                                    <RadzenText Text="@Localize["MaxLiftCoefficientTakeOff"]"/>
                                 </RadzenRow>
+                                <RadzenRow>
+                                    <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@DataRequest.RequestPurpose.MaxLiftCoefficientTakeOff.ToString("F4")" Style="width: 100%;" TagName="TagName.P"/>
+                                </RadzenRow>
+                            </RadzenStack>
+                        </RadzenRow>
+                        <RadzenRow>
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenRow>
+                                    <RadzenText Text="@Localize["ThrustToWeightRatioAndWingLoadingCoefficient"]"/>
+                                </RadzenRow>
+                                <RadzenRow>
+                                    <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@DataRequest.RequestPurpose.ThrustToWeightRatioAndWingLoadingCoefficient.ToString("F4")" Style="width: 100%;" TagName="TagName.P"/>
+                                </RadzenRow>
+                            </RadzenStack>
+                        </RadzenRow>
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenStepsItem>
+    <RadzenStepsItem Text="@string.Format("{0} 3", Localize["Step"])"
+                     Disabled="@(DataRequest.RequestPurpose?.MaxLiftCoefficientTakeOff == 0.0 || DataRequest.RequestPurpose?.ThrustToWeightRatioAndWingLoadingCoefficient == 0.0)">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep3(args); })">
+                <RadzenRow Gap="2rem">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@string.Format("{0}3", Localize["FieldsetDescription"])">
+                            <RadzenStack Gap="1rem">
                                 <RadzenRow AlignItems="AlignItems.Center">
                                     <RadzenColumn Size="12" SizeMD="4">
-                                        <RadzenLabel Text="@Localize["WingWettedArea"]" Component="WingWettedAreaNumeric"/>
+                                        <RadzenLabel Text="@Localize["NumberOfEngines"]" Component="NumberOfEnginesNumeric"/>
                                     </RadzenColumn>
                                     <RadzenColumn Size="12" SizeMD="8">
-                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.WingWettedArea"
-                                                       TValue="double"
-                                                       Format="#.0000"
-                                                       Step="0.5"
+                                        <RadzenNumeric @bind-value="DataRequest.RequestEngine.NumberOfEngines"
+                                                       TValue="int"
                                                        Style="width: 100%;"
-                                                       Name="WingWettedAreaNumeric"/>
+                                                       Name="NumberOfEnginesNumeric"/>
                                     </RadzenColumn>
                                 </RadzenRow>
                             </RadzenStack>
                         </RadzenFieldset>
                     </RadzenStack>
-                </RadzenColumn>
-            </RadzenRow>
-        </RadzenTemplateForm>
-    </RadzenStepsItem>
-    <RadzenStepsItem Text="@string.Format("{0} 3", Localize["Step"])"
-                     Disabled="@(DataRequest.RequestPurpose?.MaxLiftCoefficientTakeOff == 0.0 || DataRequest.RequestPurpose?.ThrustToWeightRatioAndWingLoadingCoefficient == 0.0)">
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
+                    <RadzenStack Gap="1rem">
+                        <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                            <RadzenRow>
+                                <RadzenText Text="@Localize["ClimbAngle"]"/>
+                            </RadzenRow>
+                            <RadzenRow>
+                                <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@((DataRequest.RequestPurpose.ClimbAngle * 180 / double.Pi).ToString("F4"))" Style="width: 100%;" TagName="TagName.P"/>
+                            </RadzenRow>
+                        </RadzenStack>
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
     </RadzenStepsItem>
     <RadzenStepsItem Text="@string.Format("{0} 4", Localize["Step"])"
                      Disabled="@(DataRequest.RequestPurpose?.ClimbAngle == 0.0)">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep4(args); })">
+                <RadzenRow Gap="2rem">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@string.Format("{0}4", Localize["FieldsetDescription"])">
+                            <RadzenStack Gap="1rem">
+                            </RadzenStack>
+                        </RadzenFieldset>
+                    </RadzenStack>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
+                    <RadzenStack Gap="1rem">
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
     </RadzenStepsItem>
     <RadzenStepsItem Text="@string.Format("{0} 5", Localize["Step"])"
                      Disabled="@(DataRequest.RequestPurpose?.LiftToDragRatio == 0.0 || DataRequest.RequestPurpose?.MinThrustToWeightRatio2Segment == 0.0)">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep5(args); })">
+                <RadzenRow Gap="2rem">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@string.Format("{0}5", Localize["FieldsetDescription"])">
+                            <RadzenStack Gap="1rem">
+                            </RadzenStack>
+                        </RadzenFieldset>
+                    </RadzenStack>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
+                    <RadzenStack Gap="1rem">
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
     </RadzenStepsItem>
     <RadzenStepsItem Text="@string.Format("{0} 6", Localize["Step"])"
                      Disabled="@(DataRequest.RequestPurpose?.MinThrustToWeightRatioMissedApproach == 0.0)">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep6(args); })">
+                <RadzenRow Gap="2rem">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@string.Format("{0}6", Localize["FieldsetDescription"])">
+                            <RadzenStack Gap="1rem">
+                            </RadzenStack>
+                        </RadzenFieldset>
+                    </RadzenStack>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
+                    <RadzenStack Gap="1rem">
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
     </RadzenStepsItem>
     <RadzenStepsItem Text="@string.Format("{0} 7", Localize["Step"])"
                      Disabled="@(DataRequest.RequestPurpose?.LiftToDragRatioCruise == 0.0)">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep7(args); })">
+                <RadzenRow Gap="2rem">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@string.Format("{0}7", Localize["FieldsetDescription"])">
+                            <RadzenStack Gap="1rem">
+                            </RadzenStack>
+                        </RadzenFieldset>
+                    </RadzenStack>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
+                    <RadzenStack Gap="1rem">
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
     </RadzenStepsItem>
     <RadzenStepsItem Text="@string.Format("{0} 8", Localize["Step"])"
                      Disabled="@(DataRequest.RequestPurpose?.ThrustToWeightFunctionCruise == null || DataRequest.RequestPurpose?.WingLoadingFunctionCruise == null)">
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+            <RadzenTemplateForm Data="@DataRequest" Submit="@((Request args) => { CalculateStep8(args); })">
+                <RadzenRow Gap="2rem">
+                    <RadzenStack>
+                        <RadzenFieldset Text="@string.Format("{0}8", Localize["FieldsetDescription"])">
+                            <RadzenStack Gap="1rem">
+                            </RadzenStack>
+                        </RadzenFieldset>
+                    </RadzenStack>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+                <RadzenFieldset Text="@Localize["BlockResult"]">
+                    <RadzenStack Gap="1rem">
+                    </RadzenStack>
+                </RadzenFieldset>
+            </RadzenStack>
+        </RadzenStack>
     </RadzenStepsItem>
     <RadzenStepsItem Text="@Localize["MatchingChart"]"
                      Disabled="@(DataRequest.RequestPurpose?.ThrustToWeightFunctionCruise == null || DataRequest.RequestPurpose?.WingLoadingFunctionCruise == null)">
@@ -298,23 +380,109 @@ else
     async void CalculateStep1(Request arg)
     {
         console.Log("Going to calculate step 1");
-        console.Log($"HeightAboveSeaLevel: {DataRequest?.RequestPurpose?.HeightAboveSeaLevel}");
-
+        // var rel = Path.Combine(Directory.GetCurrentDirectory(), "Resources", "pax-ac-design.db");
+        // console.Log($"relative path: {rel}");
+        // console.Log($"running path: {Directory.GetCurrentDirectory()}");
+       
     // calculate block 1, generate form for printing results on the same page
         var block1LandingDistance = new Block1LandingDistance();
         block1LandingDistance.Handle(DataRequest);
 
+        console.Log($"MaxLiftCoefficient: {DataRequest.RequestPurpose?.MaxLiftCoefficient}" +
+                    $"MaxLandingMassToMaxTakeOffMassRatio: {DataRequest.RequestPurpose?.MaxLandingMassToMaxTakeOffMassRatio}" +
+                    $"MaxWingLoading: {DataRequest.RequestPurpose?.MaxWingLoading}");
+
         await LocalStorageService.SetItemAsync("request", DataRequest);
     }
 
-    void CalculateStep2(Request arg)
+    async void CalculateStep2(Request arg)
     {
-    //
+        console.Log("Going to calculate step 2");
+        
+        var block2TakeOffDistance = new Block2TakeOffDistance();
+        block2TakeOffDistance.Handle(DataRequest);
+        
+        console.Log($"MaxLiftCoefficientTakeOff: {DataRequest.RequestPurpose?.MaxLiftCoefficientTakeOff}" +
+                    $"ThrustToWeightRatioAndWingLoadingCoefficient: {DataRequest.RequestPurpose?.ThrustToWeightRatioAndWingLoadingCoefficient}");
+        
+        await LocalStorageService.SetItemAsync("request", DataRequest);
     }
 
-    void CalculateStep3(Request arg)
+    async void CalculateStep3(Request arg)
     {
-    //
+        console.Log("Going to calculate step 3");
+        
+        var block3ClimbRateDuringSecondSegment = new Block3ClimbRateDuringSecondSegment();
+        block3ClimbRateDuringSecondSegment.Handle(DataRequest);
+
+        console.Log($"ClimbAngle: gamma: {DataRequest.RequestPurpose?.ClimbAngle} rad, {DataRequest.RequestPurpose.ClimbAngle * 180 / double.Pi}°");
+        
+        await LocalStorageService.SetItemAsync("request", DataRequest);
+    }
+    
+    async void CalculateStep4(Request arg)
+    {
+        console.Log("Going to calculate step 4");
+        
+        var block4LiftToDragRatioWithExtendedLandingGearAndExtendedFlaps =
+            new Block4LiftToDragRatioWithExtendedLandingGearAndExtendedFlaps();
+        block4LiftToDragRatioWithExtendedLandingGearAndExtendedFlaps.Handle(DataRequest);
+
+        console.Log($"LiftToDragRatio: {DataRequest.RequestPurpose?.LiftToDragRatio}" +
+                    $"MinThrustToWeightRatio2Segment: {DataRequest.RequestPurpose?.MinThrustToWeightRatio2Segment}");
+        
+        await LocalStorageService.SetItemAsync("request", DataRequest);
+    }
+    
+    async void CalculateStep5(Request arg)
+    {
+        console.Log("Going to calculate step 5");
+        
+        var block5ClimbRateDuringMissedApproach = new Block5ClimbRateDuringMissedApproach();
+        block5ClimbRateDuringMissedApproach.Handle(DataRequest);
+
+        console.Log($"MinThrustToWeightRatioMissedApproach: {DataRequest.RequestPurpose?.MinThrustToWeightRatioMissedApproach}");
+        
+        await LocalStorageService.SetItemAsync("request", DataRequest);
+    }
+    
+    async void CalculateStep6(Request arg)
+    {
+        console.Log("Going to calculate step 6");
+        
+        var block6LiftToDragRatioDuringCruise = new Block6LiftToDragRatioDuringCruise();
+        block6LiftToDragRatioDuringCruise.Handle(DataRequest);
+
+        console.Log($"LiftToDragRatioCruise: {DataRequest.RequestPurpose?.LiftToDragRatioCruise}");
+        
+        await LocalStorageService.SetItemAsync("request", DataRequest);
+    }
+    
+    async void CalculateStep7(Request arg)
+    {
+        console.Log("Going to calculate step 7");
+        
+        var block7Cruise = new Block7Cruise();
+        block7Cruise.Handle(DataRequest);
+
+        console.Log($"ThrustToWeightFunctionCruise h = 5000 м: {DataRequest.RequestPurpose?.ThrustToWeightFunctionCruise(5000)}" +
+                    $"WingLoadingFunctionCruise h = 5000 м: {DataRequest.RequestPurpose?.WingLoadingFunctionCruise(5000)}");
+        
+        await LocalStorageService.SetItemAsync("request", DataRequest);
+    }
+    
+    async void CalculateStep8(Request arg)
+    {
+        console.Log("Going to calculate step 8");
+        
+        var block8MatchingChart = new Block8MatchingChart();
+        block8MatchingChart.Handle(DataRequest);
+
+        console.Log($"AltitudeCruise h = 5000 м: {DataRequest.RequestPurpose?.AltitudeCruise}" +
+                    $"WingLoading h = 5000 м: {DataRequest.RequestPurpose?.WingLoading}" +
+                    $"ThrustToWeightRatio h = 5000 м: {DataRequest.RequestPurpose?.ThrustToWeightRatio}");
+        
+        await LocalStorageService.SetItemAsync("request", DataRequest);
     }
 
     void Cancel()
@@ -331,9 +499,9 @@ else
     {
         if (args.SelectedIndex == 0)
         {
-            if (DataRequest?.RequestPurpose?.MaxLiftCoefficient != 0.0
-                && DataRequest?.RequestPurpose?.MaxLandingMassToMaxTakeOffMassRatio != 0.0
-                && DataRequest?.RequestPurpose?.MaxWingLoading != 0.0)
+            if (DataRequest.RequestPurpose?.MaxLiftCoefficient != 0.0
+                && DataRequest.RequestPurpose?.MaxLandingMassToMaxTakeOffMassRatio != 0.0
+                && DataRequest.RequestPurpose?.MaxWingLoading != 0.0)
             {
             }
         }

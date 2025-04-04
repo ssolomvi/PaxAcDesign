@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!-- 
+      Microsoft ResX Schema 
+      
+      Version 2.0
+      
+      The primary goals of this format is to allow a simple XML format 
+      that is mostly human readable. The generation and parsing of the 
+      various data types are done through the TypeConverter classes 
+      associated with the data types.
+      
+      Example:
+      
+      ... ado.net/XML headers & schema ...
+      <resheader name="resmimetype">text/microsoft-resx</resheader>
+      <resheader name="version">2.0</resheader>
+      <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+      <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+      <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+      <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+      <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+          <value>[base64 mime encoded serialized .NET Framework object]</value>
+      </data>
+      <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+          <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+          <comment>This is a comment</comment>
+      </data>
+                  
+      There are any number of "resheader" rows that contain simple 
+      name/value pairs.
+      
+      Each data row contains a name, and value. The row also contains a 
+      type or mimetype. Type corresponds to a .NET class that support 
+      text/value conversion through the TypeConverter architecture. 
+      Classes that don't support this are serialized and stored with the 
+      mimetype set.
+      
+      The mimetype is used for serialized objects, and tells the 
+      ResXResourceReader how to depersist the object. This is currently not 
+      extensible. For a given mimetype the value must be set accordingly:
+      
+      Note - application/x-microsoft.net.object.binary.base64 is the format 
+      that the ResXResourceWriter will generate, however the reader can 
+      read any of the formats listed below.
+      
+      mimetype: application/x-microsoft.net.object.binary.base64
+      value   : The object must be serialized with 
+              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+              : and then encoded with base64 encoding.
+      
+      mimetype: application/x-microsoft.net.object.soap.base64
+      value   : The object must be serialized with 
+              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+              : and then encoded with base64 encoding.
+  
+      mimetype: application/x-microsoft.net.object.bytearray.base64
+      value   : The object must be serialized into a byte array 
+              : using a System.ComponentModel.TypeConverter
+              : and then encoded with base64 encoding.
+      -->
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="BypassRatio" xml:space="preserve">
+    <value>Степень двухконтурности</value>
+  </data>
+    <data name="City" xml:space="preserve">
+    <value>Город</value>
+  </data>
+    <data name="Employee Data" xml:space="preserve">
+    <value>Данные о сотруднике</value>
+  </data>
+    <data name="EngineType" xml:space="preserve">
+    <value>Тип двигателя</value>
+  </data>
+    <data name="Female" xml:space="preserve">
+    <value>Женщина</value>
+  </data>
+    <data name="Gender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+    <data name="Joining Date" xml:space="preserve">
+    <value>Дата приема на работу</value>
+  </data>
+    <data name="Male" xml:space="preserve">
+    <value>Мужчина</value>
+  </data>
+    <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+    <data name="NumberOfEngines" xml:space="preserve">
+    <value>Количество двигателей</value>
+  </data>
+    <data name="RequestEngine" xml:space="preserve">
+    <value>Данные о двигателе</value>
+  </data>
+    <data name="Salary" xml:space="preserve">
+    <value>Зарплата</value>
+  </data>
+    <data name="Select Gender" xml:space="preserve">
+    <value>Выберите пол</value>
+  </data>
+    <data name="SelectEngineType" xml:space="preserve">
+    <value>Выберите тип двигателя</value>
+  </data>
+    <data name="Title" xml:space="preserve">
+    <value>Туториал от {0}</value>
+  </data>
+    <data name="Turbojet" xml:space="preserve">
+    <value>Турбореактивный двигатель</value>
+  </data>
+    <data name="Turboprop" xml:space="preserve">
+    <value>Турбовинтовой двигатель</value>
+  </data>
+    <data name="BusinessJet" xml:space="preserve">
+    <value>Самолет бизнес-класса</value>
+  </data>
+    <data name="ShortRangeJetTransport" xml:space="preserve">
+    <value>Реактивный самолет малой дальности полета</value>
+  </data>
+    <data name="MediumRangeJetTransport" xml:space="preserve">
+    <value>Реактивный самолет средней дальности полета</value>
+  </data>
+    <data name="LongRangeJetTransport" xml:space="preserve">
+    <value>Реактивный самолет большой дальности полета</value>
+  </data>
+    <data name="UltraLongRangeJetTransport" xml:space="preserve">
+    <value>Реактивный самолет сверхбольшой дальности полета</value>
+  </data>
+    <data name="Fighter" xml:space="preserve">
+    <value>Истребитель</value>
+  </data>
+    <data name="SupersonicCruise" xml:space="preserve">
+    <value>Сверхзвуковой крейсерский самолет</value>
+  </data>
+    <data name="ShortRange" xml:space="preserve">
+    <value>Короткая дистанция</value>
+  </data>
+    <data name="MediumRange" xml:space="preserve">
+    <value>Средняя дистанция</value>
+  </data>
+    <data name="LongRange" xml:space="preserve">
+    <value>Большая дистанция</value>
+  </data>
+    <data name="UltraLongRange" xml:space="preserve">
+    <value>Сверхбольшая дистанция</value>
+  </data>
+    <data name="CleanAirfoil" xml:space="preserve">
+    <value>Чистый аэродинамический профиль</value>
+  </data>
+    <data name="PlainFlap" xml:space="preserve">
+    <value>Простой закрылок</value>
+  </data>
+    <data name="SingleSlottedFlap" xml:space="preserve">
+    <value>Закрылок с одной прорезью</value>
+  </data>
+    <data name="DoubleSlottedFlap" xml:space="preserve">
+    <value>Закрылок с двумя прорезями</value>
+  </data>
+    <data name="SplitFlap" xml:space="preserve">
+    <value>Разделенный закрылок</value>
+  </data>
+    <data name="DoubleWingJunkers" xml:space="preserve">
+    <value>Двухкрылые юнкерсы</value>
+  </data>
+    <data name="FowlerFlap" xml:space="preserve">
+    <value>Закрылок Фаулера</value>
+  </data>
+    <data name="Slat" xml:space="preserve">
+    <value>Предкрылок</value>
+  </data>
+    <data name="PlainFlapAndSlat" xml:space="preserve">
+    <value>Простой закрылок и предкрылок</value>
+  </data>
+    <data name="SingleSlottedFlapAndSlat" xml:space="preserve">
+    <value>Закрылок с одной прорезью и предкрылок</value>
+  </data>
+    <data name="DoubleSlottedFlapAndSlat" xml:space="preserve">
+    <value>Закрылок с двумя прорезями и предкрылок</value>
+  </data>
+    <data name="FowlerFlapAndSlat" xml:space="preserve">
+    <value>Закрылок Фаулера и предкрылок</value>
+  </data>
+    <data name="Calculate" xml:space="preserve">
+    <value>Вычислить</value>
+  </data>
+    <data name="Block1Result" xml:space="preserve">
+    <value>Результат вычисления первого блока</value>
+  </data>
+    <data name="MaxLiftCoefficient" xml:space="preserve">
+    <value>Максимальный коэффициент подъемной силы</value>
+  </data>
+    <data name="MaxLandingMassToMaxTakeOffMassRatio" xml:space="preserve">
+    <value>Отношение максимальной посадочной массы к максимальной взлетной массе</value>
+  </data>
+    <data name="MaxWingLoading" xml:space="preserve">
+    <value>Максимальная нагрузка на крыло</value>
+  </data>
+    <data name="Next" xml:space="preserve">
+    <value>Следующий шаг</value>
+  </data>
+    <data name="Previous" xml:space="preserve">
+    <value>Предыдущий шаг</value>
+  </data>
+    <data name="RequestPurpose" xml:space="preserve">
+    <value>Данные о запросе</value>
+  </data>
+    <data name="AircraftType" xml:space="preserve">
+    <value>Тип самолёта</value>
+  </data>
+    <data name="SelectAircraftType" xml:space="preserve">
+    <value>Выберите тип самолёта</value>
+  </data>
+    <data name="HighLiftDevice" xml:space="preserve">
+    <value>Тип механизации крыла (закрылок и предкрылок)</value>
+  </data>
+    <data name="SelectHighLiftDevice" xml:space="preserve">
+    <value>Выберите тип механизации крыла</value>
+  </data>
+    <data name="HeightAboveSeaLevel" xml:space="preserve">
+    <value>Высота над уровнем моря</value>
+  </data>
+    <data name="LandingDistance" xml:space="preserve">
+    <value>Посадочный путь</value>
+  </data>
+    <data name="TakeOffGroundRoll" xml:space="preserve">
+    <value>Путь по земле при взлете</value>
+  </data>
+    <data name="WingAspectRatio" xml:space="preserve">
+    <value>Соотношение сторон крыла</value>
+  </data>
+    <data name="WingWettedArea" xml:space="preserve">
+    <value>Отношение площади смачивания самолета к площади крыла</value>
+  </data>
+    <data name="Step" xml:space="preserve">
+    <value>Шаг</value>
+  </data>
+    <data name="FieldsetDescription" xml:space="preserve">
+    <value>Параметры для шага №</value>
+  </data>
+    <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <data name="pax-ac-design" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>pax-ac-design.db;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </data>
+</root>

@@ -303,6 +303,15 @@ namespace PaxAcDesign.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Максимальный коэффициент подъемной силы с закрылками во взлетном положении.
+        /// </summary>
+        public static string MaxLiftCoefficientTakeOff {
+            get {
+                return ResourceManager.GetString("MaxLiftCoefficientTakeOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Максимальная нагрузка на крыло.
         /// </summary>
         public static string MaxWingLoading {
@@ -524,6 +533,15 @@ namespace PaxAcDesign.Resources {
         public static string TakeOffGroundRoll {
             get {
                 return ResourceManager.GetString("TakeOffGroundRoll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коэффициент зависимости тяговооружённости от нагрузки на крыло.
+        /// </summary>
+        public static string ThrustToWeightRatioAndWingLoadingCoefficient {
+            get {
+                return ResourceManager.GetString("ThrustToWeightRatioAndWingLoadingCoefficient", resourceCulture);
             }
         }
         

@@ -1,5 +1,6 @@
 ﻿using PaxAcDesign.calculate.datatype;
 using PaxAcDesign.calculate.Handlers;
+using PaxAcDesign.Data;
 
 // using Microsoft.Data.Sqlite;
 
@@ -13,6 +14,14 @@ namespace PaxAcDesign.calculate.PreliminarySizing;
  */
 public class Block1LandingDistance : AbstractHandler
 {
+    // private ConnectionProvider _connectionProvider;
+
+    public Block1LandingDistance()
+    {
+        // todo:
+        // _connectionProvider = ConnectionProvider.create("");
+    }
+
     protected override bool CanHandle(Request request)
     {
         // check requirements
@@ -22,16 +31,6 @@ public class Block1LandingDistance : AbstractHandler
     public override Request Handle(Request request)
     {
         if (!CanHandle(request)) return PassToNextHandler(request);
-
-        /*
-        using (var connection = new SqliteConnection(
-                   // "Data Source=Databases/pax-ac-design.db;"))
-                   // "Data Source=C:/c_sharp/BlazorApp2/Databases/pax-ac-design.db"))
-                   "Data Source=pax-ac-design.db"))
-                   // "Data Source=pax-ac-design.db;"))
-        {
-            connection.Open();
-            */
 
         #region Расчет m_ML/S_W
 
@@ -60,29 +59,35 @@ public class Block1LandingDistance : AbstractHandler
         // double maxLiftCoefficient = 0.0; 
         double maxLiftCoefficient = 1.45;
 
-        /*
-        // взятие коэффициента C_LmaxL из таблицы в соответствии с заданным типом механизации крыла
-        // todo: добавить WHERE
-        string sqlExpression = "SELECT * FROM `CL_max (Dubs1987)`";
-        SqliteCommand command = new SqliteCommand(sqlExpression, connection);
-        using (SqliteDataReader reader = command.ExecuteReader())
-        {
-            if (reader.HasRows) // если есть данные
-            {
-                while (reader.Read()) // построчно считываем данные
-                {
-                    // todo: где-то нужна проверка на существование такого поля; если его нет, то что делать - exception?
-                    string highLiftDevicesTable = (string) reader["high_lift_devices"];
+//         // взятие коэффициента C_LmaxL из таблицы в соответствии с заданным типом механизации крыла
+        // var connection = _connectionProvider.getConnection();
+        // using (var ts = connection.BeginTransaction())
+        // {
+        //     var selectCommand = connection.CreateCommand();
+        //     selectCommand.Transaction = ts;
+        //     selectCommand.CommandText =
+        //         $"SELECT * FROM `CL_max (Dubs1987)` where high_lift_devices = {highLiftDevices}";
+        //     
+        //     using (var reader = selectCommand.ExecuteReader())
+        //     {
+        //         while (reader.Read()) // построчно считываем данные
+        //         {
+        //             maxLiftCoefficient = (double)reader["C_L,max"];
+        //             break;
+        //         }
+        //     }
+        // }
 
-                    if (highLiftDevices.Equals(highLiftDevicesTable))
-                    {
-                        maxLiftCoefficient = (double) reader["C_L,max"];
-                        break;
-                    }
-                }
-            }
-        }
-        */
+        // var command =
+            // _dbContext.CreateCommand($"SELECT * FROM `CL_max (Dubs1987)` where high_lift_devices = {highLiftDevices}");
+        // using (var reader = command.ExecuteReader())
+        // {
+            // while (reader.Read()) // построчно считываем данные
+            // {
+                // maxLiftCoefficient = (double)reader["C_L,max"];
+                // break;
+            // }
+        // }
 
         // сохранение коэффициента C_L,max,L для дальнейшего использования
         request.RequestPurpose.MaxLiftCoefficient = maxLiftCoefficient;
@@ -103,38 +108,43 @@ public class Block1LandingDistance : AbstractHandler
 
         request.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio = 0.88;
 
-        /*
         // взятие значения m_ML/m_MTO из таблицы Roskam I
-        // todo: добавить WHERE
-        sqlExpression = "SELECT * FROM `m_L/m_MTO (Roskam I)`";
-        command = new SqliteCommand(sqlExpression, connection);
-        using (SqliteDataReader reader = command.ExecuteReader())
-        {
-            if (reader.HasRows) // если есть данные
-            {
-                while (reader.Read()) // построчно считываем данные
-                {
-                    string aircraftTypeTable = (string) reader["aircraft_type"];
-
-                    if (aircraftType.Equals(aircraftTypeTable))
-                    {
-                        request.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio = (double) reader["ratio_average"];
-                        break;
-                    }
-                }
-            }
-        }
-        */
+        // using (var ts = connection.BeginTransaction())
+        // {
+        //     var selectCommand = connection.CreateCommand();
+        //     selectCommand.Transaction = ts;
+        //     selectCommand.CommandText =
+        //         $"SELECT * FROM `m_L/m_MTO (Roskam I)` where aircraft_type = {aircraftType}";
+        //     
+        //     using (var reader = selectCommand.ExecuteReader())
+        //     {
+        //         while (reader.Read()) // построчно считываем данные
+        //         {
+        //             request.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio = (double)reader["ratio_average"];
+        //             break;
+        //         }
+        //     }
+        // }
+        // command = _dbContext.CreateCommand(
+        //     $"SELECT * FROM `m_L/m_MTO (Roskam I)` where aircraft_type = {aircraftType}");
+        // using (var reader = command.ExecuteReader())
+        // {
+        //     if (reader.HasRows) // если есть данные
+        //     {
+        //         while (reader.Read()) // построчно считываем данные
+        //         {
+        //             request.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio = (double)reader["ratio_average"];
+        //             break;
+        //         }
+        //     }
+        // }
 
         #endregion
 
         // максимальная нагрузка на крыло m_MTO/S_W, формула 5.6
         request.RequestPurpose.MaxWingLoading = wingLoadingAtMaxLandingMass
                                                 / request.RequestPurpose.MaxLandingMassToMaxTakeOffMassRatio;
-        /*
-    connection.Close();
-}
-*/
+
         return PassToNextHandler(request);
     }
 }

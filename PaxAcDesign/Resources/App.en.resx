@@ -240,8 +240,8 @@
   <data name="Calculate" xml:space="preserve">
     <value>Calculate</value>
   </data>
-  <data name="Block1Result" xml:space="preserve">
-    <value>First block calculation result</value>
+  <data name="BlockResult" xml:space="preserve">
+    <value>Block calculation result</value>
   </data>
   <data name="MaxLiftCoefficient" xml:space="preserve">
     <value>Max lift coefficient</value>
@@ -288,7 +288,20 @@
   <data name="WingWettedArea" xml:space="preserve">
     <value>Wing wetted area</value>
   </data>
+  <data name="MaxLiftCoefficientTakeOff" xml:space="preserve">
+    <value>Max Lift Coefficient TakeOff</value>
+  </data>
+  <data name="ThrustToWeightRatioAndWingLoadingCoefficient" xml:space="preserve">
+    <value>Thrust To Weight Ratio And Wing Loading Coefficient</value>
+  </data>
   <data name="Step" xml:space="preserve">
     <value>Step</value>
+  </data>
+  <data name="FieldsetDescription" xml:space="preserve">
+    <value>Params for step #</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pax-ac-design" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
 </root>

@@ -288,10 +288,20 @@
   <data name="WingWettedArea" xml:space="preserve">
     <value>Отношение площади смачивания самолета к площади крыла</value>
   </data>
+  <data name="MaxLiftCoefficientTakeOff" xml:space="preserve">
+    <value>Максимальный коэффициент подъемной силы с закрылками во взлетном положении</value>
+  </data>
+  <data name="ThrustToWeightRatioAndWingLoadingCoefficient" xml:space="preserve">
+    <value>Коэффициент зависимости тяговооружённости от нагрузки на крыло</value>
+  </data>
   <data name="Step" xml:space="preserve">
     <value>Шаг</value>
   </data>
   <data name="FieldsetDescription" xml:space="preserve">
     <value>Параметры для шага №</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <!-- <data name="pax-ac-design" type="System.Resources.ResXFileRef, System.Windows.Forms"> -->
+  <!--   <value>pax-ac-design.db;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value> -->
+  <!-- </data> -->
 </root>

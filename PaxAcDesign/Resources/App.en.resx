@@ -300,6 +300,18 @@
   <data name="FieldsetDescription" xml:space="preserve">
     <value>Params for step #</value>
   </data>
+  <data name="BlockResult" xml:space="preserve">
+    <value>Results of block calculation</value>
+  </data>
+  <data name="ClimbAngle" xml:space="preserve">
+    <value>Climb angle</value>
+  </data>
+  <data name="LiftToDragRatio" xml:space="preserve">
+    <value>Lift to drag ratio</value>
+  </data>
+  <data name="MinThrustToWeightRatio2Segment" xml:space="preserve">
+    <value>Min thrust to weight ratio for the second segment</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pax-ac-design" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />

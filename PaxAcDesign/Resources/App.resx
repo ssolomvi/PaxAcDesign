@@ -300,6 +300,18 @@
   <data name="FieldsetDescription" xml:space="preserve">
     <value>Параметры для шага №</value>
   </data>
+  <data name="BlockResult" xml:space="preserve">
+    <value>Результаты вычисления блока</value>
+  </data>
+  <data name="ClimbAngle" xml:space="preserve">
+    <value>Угол набора высоты</value>
+  </data>
+  <data name="LiftToDragRatio" xml:space="preserve">
+    <value>Отношение подъемной силы к лобовому сопротивлению</value>
+  </data>
+  <data name="MinThrustToWeightRatio2Segment" xml:space="preserve">
+    <value>Минимальная тяговооруженность</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <!-- <data name="pax-ac-design" type="System.Resources.ResXFileRef, System.Windows.Forms"> -->
   <!--   <value>pax-ac-design.db;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value> -->

@@ -78,6 +78,15 @@ namespace PaxAcDesign.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Результаты вычисления блока.
+        /// </summary>
+        public static string BlockResult {
+            get {
+                return ResourceManager.GetString("BlockResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Самолет бизнес-класса.
         /// </summary>
         public static string BusinessJet {
@@ -119,6 +128,15 @@ namespace PaxAcDesign.Resources {
         public static string CleanAirfoil {
             get {
                 return ResourceManager.GetString("CleanAirfoil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Угол набора высоты.
+        /// </summary>
+        public static string ClimbAngle {
+            get {
+                return ResourceManager.GetString("ClimbAngle", resourceCulture);
             }
         }
         
@@ -258,6 +276,15 @@ namespace PaxAcDesign.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Отношение подъемной силы к лобовому сопротивлению.
+        /// </summary>
+        public static string LiftToDragRatio {
+            get {
+                return ResourceManager.GetString("LiftToDragRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Большая дистанция.
         /// </summary>
         public static string LongRange {
@@ -335,6 +362,15 @@ namespace PaxAcDesign.Resources {
         public static string MediumRangeJetTransport {
             get {
                 return ResourceManager.GetString("MediumRangeJetTransport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Минимальная тяговооруженность.
+        /// </summary>
+        public static string MinThrustToWeightRatio2Segment {
+            get {
+                return ResourceManager.GetString("MinThrustToWeightRatio2Segment", resourceCulture);
             }
         }
         

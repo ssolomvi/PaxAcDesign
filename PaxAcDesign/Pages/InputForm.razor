@@ -101,7 +101,7 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
                         <RadzenRow>
@@ -168,7 +168,7 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
                         <RadzenRow>
@@ -223,7 +223,7 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
                         <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
@@ -247,6 +247,20 @@ else
                     <RadzenStack>
                         <RadzenFieldset Text="@string.Format("{0}4", Localize["FieldsetDescription"])">
                             <RadzenStack Gap="1rem">
+                                <RadzenRow AlignItems="AlignItems.Center">
+                                    <RadzenColumn Size="12" SizeMD="4">
+                                        <RadzenLabel Text="@Localize["WingAspectRatio"]" Component="WingAspectRatioNumeric"/>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenNumeric @bind-value="DataRequest.RequestPurpose.WingAspectRatio"
+                                                       TValue="double"
+                                                       Format="#.0000"
+                                                       Step="0.5"
+                                                       Style="width: 100%;"
+                                                       Name="WingAspectRatioNumeric"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                                    @* todo Vs, V*@
                             </RadzenStack>
                         </RadzenFieldset>
                     </RadzenStack>
@@ -255,9 +269,29 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
+                        <RadzenRow>
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenRow>
+                                    <RadzenText Text="@Localize["LiftToDragRatio"]"/>
+                                </RadzenRow>
+                                <RadzenRow>
+                                    <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@DataRequest.RequestPurpose.LiftToDragRatio.ToString("F4")" Style="width: 100%;" TagName="TagName.P"/>
+                                </RadzenRow>
+                            </RadzenStack>
+                        </RadzenRow>
+                        <RadzenRow>
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenRow>
+                                    <RadzenText Text="@Localize["MinThrustToWeightRatio2Segment"]"/>
+                                </RadzenRow>
+                                <RadzenRow>
+                                    <RadzenText class="rz-p-1 rz-border rz-border-radius" Text="@DataRequest.RequestPurpose.MinThrustToWeightRatio2Segment.ToString("F4")" Style="width: 100%;" TagName="TagName.P"/>
+                                </RadzenRow>
+                            </RadzenStack>
+                        </RadzenRow>
                     </RadzenStack>
                 </RadzenFieldset>
             </RadzenStack>
@@ -279,7 +313,7 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
                     </RadzenStack>
@@ -303,7 +337,7 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
                     </RadzenStack>
@@ -327,7 +361,7 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
                     </RadzenStack>
@@ -351,7 +385,7 @@ else
                     <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="@Localize["Calculate"]"/>
                 </RadzenStack>
             </RadzenTemplateForm>
-            <RadzenStack Gap="2rem" class="rz-p-0 rz-p-lg-4">
+            <RadzenStack Gap="2rem">
                 <RadzenFieldset Text="@Localize["BlockResult"]">
                     <RadzenStack Gap="1rem">
                     </RadzenStack>
@@ -370,7 +404,7 @@ else
 
 @code {
     EventConsole console;
-    public Request DataRequest = new();
+    private Request DataRequest = new();
 
     protected override async Task OnInitializedAsync()
     {
